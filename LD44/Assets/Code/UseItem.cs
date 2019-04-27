@@ -22,6 +22,9 @@ public class UseItem : MonoBehaviour {
         
         switch (item) {
             case ItemType.WaterCan:
+                if (controller.currentGroundType == GroundType.Dirt) {
+                    controller.plant.waterGround();
+                }
                 break;
             case ItemType.Hoe:
                 controller.groundHitWithHoe();

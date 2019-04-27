@@ -12,23 +12,11 @@ public class PlantManager : MonoBehaviour {
     public Sprite carrotTwo;
     public Sprite carrotThree;
 
-    public float cornGrowTime;
-    public float carrotGrowTime;
-
     public float cornGrowRate;
     public float carrotGrowRate;
 
-    public float getGrowTimeByPlantType(PlantType type) {
-        switch (type) {
-            case PlantType.Corn:
-                return cornGrowTime;
-            case PlantType.Carrot:
-                return carrotGrowTime;
-            default:
-                Debug.Log("No grow time for that plant type");
-                return 999;
-        }
-    }
+    public float wateredMultiplier;
+    public float wateredLastsTime;
 
     public PlantType getPlantTypeFromSeed(ItemType item) {
         switch (item) {

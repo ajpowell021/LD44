@@ -6,13 +6,14 @@ public class Plant : MonoBehaviour {
 
     public PlantType plantType;
     public float currentGrowPercentage;
-    public float timeToGrow;
     public float growRate;
     public Sprite plantSprite;
     public int plantLevel;
     private bool growing;
     public bool canBePicked;
     public bool seedPresent;
+    public bool watered;
+    private float currentWaterCount;
 
     private SpriteRenderer spriteRenderer;
     private PlantManager plantManager;
@@ -29,13 +30,21 @@ public class Plant : MonoBehaviour {
         if (growing) {
             growPlant();
         }
+
+        if (watered) {
+            waterCountDown();
+        }
+    }
+
+    public void waterGround() {
+        watered = true;
+        // Add sprite logic for watering.
     }
 
     public void plantPlant(ItemType itemType) {
         plantType = plantManager.getPlantTypeFromSeed(itemType);
         plantLevel = 1;
         setPlantSprite();
-        timeToGrow = plantManager.getGrowTimeByPlantType(plantType);
         growRate = plantManager.getGrowRateFromPlantType(plantType);
         growing = true;
         seedPresent = true;
@@ -51,7 +60,13 @@ public class Plant : MonoBehaviour {
     }
 
     private void growPlant() {
-        currentGrowPercentage += Time.deltaTime * growRate;
+        if (watered) {
+            currentGrowPercentage += Time.deltaTime * growRate * plantManager.wateredMultiplier;
+        }
+        else {
+            currentGrowPercentage += Time.deltaTime * growRate;
+
+        }
         if (currentGrowPercentage > 50 && currentGrowPercentage < 52) {
             plantLevel = 2;
             setPlantSprite();
@@ -67,5 +82,14 @@ public class Plant : MonoBehaviour {
     private void setPlantSprite() {
         plantSprite = plantManager.getSpriteByTypeAndLevel(plantLevel, plantType);
         spriteRenderer.sprite = plantSprite;
+    }
+
+    private void waterCountDown() {
+        currentWaterCount += Time.deltaTime;
+        if (currentWaterCount >= plantManager.wateredLastsTime) {
+            watered = false;
+            currentWaterCount = 0;
+            // Change sprite to un watered.
+        }
     }
 }
