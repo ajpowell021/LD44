@@ -5,9 +5,13 @@ using UnityEngine;
 public class ClassManager : MonoBehaviour {
 
     public static ClassManager instance;
+
+    public GameObject farmerObject;
     
     // Classes
+    public InputManager inputManager;
     public AgeManager ageManager;
+    public FarmerMovement farmerMovement;
     
     private void Awake() {
         setInstance();
@@ -24,6 +28,8 @@ public class ClassManager : MonoBehaviour {
     }
 
     private void setClasses() {
+        inputManager = gameObject.GetComponent<InputManager>();
         ageManager = gameObject.GetComponent<AgeManager>();
+        farmerMovement = farmerObject.GetComponent<FarmerMovement>();
     }
 }
