@@ -191,7 +191,6 @@ public class FoodManager : MonoBehaviour {
     }
 
     private ItemType getItemTypeFromRecipeNumber(int recipeNumber) {
-        Debug.Log("recipeNumber: " + recipeNumber);
         switch (recipeNumber) {
             case 1:
                 return ItemType.RecipeOne;
