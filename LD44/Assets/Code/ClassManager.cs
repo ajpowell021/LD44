@@ -16,6 +16,7 @@ public class ClassManager : MonoBehaviour {
     public SpriteManager spriteManager;
     public PrefabManager prefabManager;
     public DropItem dropItem;
+    public SelectedTileController selectedTileController;
     
     private void Awake() {
         setInstance();
@@ -39,5 +40,6 @@ public class ClassManager : MonoBehaviour {
         spriteManager = gameObject.GetComponent<SpriteManager>();
         prefabManager = gameObject.GetComponent<PrefabManager>();
         dropItem = farmerObject.GetComponent<DropItem>();
+        selectedTileController = farmerObject.GetComponent<SelectedTileController>();
     }
 }

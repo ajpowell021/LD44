@@ -6,6 +6,7 @@ public class PrefabManager : MonoBehaviour {
 
     public GameObject waterCanObject;
     public GameObject cornSeedObject;
+    public GameObject grassObject;
 
     public GameObject getObjectByItemType(ItemType item) {
         switch (item) {
