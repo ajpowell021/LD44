@@ -14,6 +14,8 @@ public class ClassManager : MonoBehaviour {
     public FarmerMovement farmerMovement;
     public PlayerInventory playerInventory;
     public SpriteManager spriteManager;
+    public PrefabManager prefabManager;
+    public DropItem dropItem;
     
     private void Awake() {
         setInstance();
@@ -35,5 +37,7 @@ public class ClassManager : MonoBehaviour {
         farmerMovement = farmerObject.GetComponent<FarmerMovement>();
         playerInventory = farmerObject.GetComponent<PlayerInventory>();
         spriteManager = gameObject.GetComponent<SpriteManager>();
+        prefabManager = gameObject.GetComponent<PrefabManager>();
+        dropItem = farmerObject.GetComponent<DropItem>();
     }
 }

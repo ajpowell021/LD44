@@ -10,9 +10,11 @@ public class PlayerInventory : MonoBehaviour {
     
     // Classes
     private SpriteManager spriteManager;
+    private DropItem dropItem;
 
     private void Start() {
         spriteManager = ClassManager.instance.spriteManager;
+        dropItem = ClassManager.instance.dropItem;
     }
 
     public void setNewInventoryItem(ItemType newItem) {
@@ -21,6 +23,7 @@ public class PlayerInventory : MonoBehaviour {
     }
 
     public void dropInventoryItem() {
+        dropItem.itemDropped(heldItem);
         heldItem = ItemType.None;
         equippedItemImage.sprite = spriteManager.getSpriteByItemType(ItemType.None);
     }
