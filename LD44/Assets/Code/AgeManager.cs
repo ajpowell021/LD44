@@ -24,4 +24,11 @@ public class AgeManager : MonoBehaviour {
     private void setAgeText() {
         ageText.text = "Age: " + Mathf.FloorToInt(currentAge) + " years";
     }
+
+    public void eatFood(int ageValue) {
+        currentAge -= ageValue;
+        if (currentAge < 0) {
+            currentAge = 0;
+        }
+    }
 }

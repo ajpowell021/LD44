@@ -8,12 +8,16 @@ public class UseItem : MonoBehaviour {
     private GroundTileManager groundTileManager;
     private SelectedTileController selectedTileController;
     private PlantManager plantManager;
+    private AgeManager ageManager;
+    private FoodManager foodManager;
 
     private void Start() {
         playerInventory = ClassManager.instance.playerInventory;
         groundTileManager = ClassManager.instance.groundTileManager;
         selectedTileController = ClassManager.instance.selectedTileController;
         plantManager = ClassManager.instance.plantManager;
+        ageManager = ClassManager.instance.ageManager;
+        foodManager = ClassManager.instance.foodManager;
     }
 
     public void useEquippedItem() {
@@ -34,6 +38,14 @@ public class UseItem : MonoBehaviour {
                     controller.plantSeed(item);
                     playerInventory.deleteInventoryItem();
                 }
+                break;
+            case ItemType.Corn:
+                playerInventory.deleteInventoryItem();
+                ageManager.eatFood(foodManager.getAgeFromItemType(ItemType.Corn));
+                break;
+            case ItemType.Carrot:
+                playerInventory.deleteInventoryItem();
+                ageManager.eatFood(foodManager.getAgeFromItemType(ItemType.Carrot));
                 break;
             case ItemType.None:
                 if (controller.plant.canBePicked) {

@@ -12,6 +12,7 @@
           <e p="DropItem.cs" t="Include" />
           <e p="Enums.cs" t="Include" />
           <e p="FarmerMovement.cs" t="Include" />
+          <e p="FoodManager.cs" t="Include" />
           <e p="GroundTileController.cs" t="Include" />
           <e p="GroundTileManager.cs" t="Include" />
           <e p="InputManager.cs" t="Include" />
