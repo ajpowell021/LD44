@@ -16,15 +16,18 @@ public class UseItem : MonoBehaviour {
 
     public void useEquippedItem() {
         ItemType item = playerInventory.heldItem;
-
+        GroundTileController controller = groundTileManager.getTileByPosition(selectedTileController.selectedTilePosition);
+        
         switch (item) {
             case ItemType.WaterCan:
                 break;
             case ItemType.Hoe:
-                GroundTileController controller = groundTileManager.getTileByPosition(selectedTileController.selectedTilePosition);
                 controller.groundHitWithHoe();
                 break;
             case ItemType.CornSeed:
+                if (controller.currentGroundType == GroundType.Dirt) {
+                    controller.plantSeed(item);    
+                }
                 break;
             default:
                 Debug.Log("Unhandled ItemType in UseItem");

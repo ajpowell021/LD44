@@ -11,10 +11,16 @@ public enum ItemType {
     None,
     WaterCan,
     CornSeed,
-    Hoe
+    Hoe,
+    CarrotSeed
 }
 
 public enum GroundType {
     Grass,
     Dirt
+}
+
+public enum PlantType {
+    Corn,
+    Carrot
 }

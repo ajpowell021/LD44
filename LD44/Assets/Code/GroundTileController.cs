@@ -7,11 +7,13 @@ public class GroundTileController : MonoBehaviour {
     public Sprite grassSprite;
     public Sprite dirtSprite;
     public GroundType currentGroundType;
+    private Plant plant;
 
     private SpriteRenderer spriteRenderer;
 
     private void Awake() {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        plant = gameObject.GetComponent<Plant>();
     }
 
     public void groundHitWithHoe() {
@@ -22,6 +24,10 @@ public class GroundTileController : MonoBehaviour {
             currentGroundType = GroundType.Dirt;
         }
         setSprite();
+    }
+
+    public void plantSeed(ItemType seedType) {
+        plant.plantPlant(seedType);
     }
 
     private void setSprite() {

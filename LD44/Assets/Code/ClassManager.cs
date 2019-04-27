@@ -19,6 +19,7 @@ public class ClassManager : MonoBehaviour {
     public SelectedTileController selectedTileController;
     public UseItem useItem;
     public GroundTileManager groundTileManager;
+    public PlantManager plantManager;
     
     private void Awake() {
         setInstance();
@@ -45,5 +46,6 @@ public class ClassManager : MonoBehaviour {
         selectedTileController = farmerObject.GetComponent<SelectedTileController>();
         useItem = farmerObject.GetComponent<UseItem>();
         groundTileManager = gameObject.GetComponent<GroundTileManager>();
+        plantManager = gameObject.GetComponent<PlantManager>();
     }
 }

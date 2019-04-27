@@ -16,6 +16,8 @@
           <e p="GroundTileManager.cs" t="Include" />
           <e p="InputManager.cs" t="Include" />
           <e p="PickUp.cs" t="Include" />
+          <e p="Plant.cs" t="Include" />
+          <e p="PlantManager.cs" t="Include" />
           <e p="PlayerInventory.cs" t="Include" />
           <e p="PrefabManager.cs" t="Include" />
           <e p="SelectedTileController.cs" t="Include" />
