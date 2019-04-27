@@ -12,7 +12,37 @@ public class FarmerMovement : MonoBehaviour {
     }
 
     public void move(Vector3 direction) {
-        transform.Translate(direction * moveSpeed * Time.deltaTime);
-        currentFacingDirection = direction;
+        if (canMoveUp(direction) && canMoveDown(direction) && canMoveLeft(direction) && canMoveRight(direction)) {
+            transform.Translate(direction * moveSpeed * Time.deltaTime);
+            currentFacingDirection = direction;
+        }
+    }
+
+    private bool canMoveUp(Vector3 direction) {
+        if (direction == Vector3.up && transform.position.y > 5) {
+            return false;
+        }
+        return true;
+    }
+    
+    private bool canMoveDown(Vector3 direction) {
+        if (direction == Vector3.down && transform.position.y < -4) {
+            return false;
+        }
+        return true;
+    }
+    
+    private bool canMoveLeft(Vector3 direction) {
+        if (direction == Vector3.left && transform.position.x < -10) {
+            return false;
+        }
+        return true;
+    }
+    
+    private bool canMoveRight(Vector3 direction) {
+        if (direction == Vector3.right && transform.position.x > 10) {
+            return false;
+        }
+        return true;
     }
 }

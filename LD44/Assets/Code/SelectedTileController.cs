@@ -26,6 +26,22 @@ public class SelectedTileController : MonoBehaviour {
         selectedTilePosition = playerPostion + currentFacingDirection;
         selectedTilePosition.x = Mathf.Round(selectedTilePosition.x);
         selectedTilePosition.y = Mathf.Round(selectedTilePosition.y);
+
+        if (selectedTilePosition.x > 10) {
+            selectedTilePosition.x = 10;
+        }
+        else if (selectedTilePosition.x < -10) {
+            selectedTilePosition.x = -10;
+        }
+
+        if (selectedTilePosition.y > 5) {
+            selectedTilePosition.y = 5;
+        }
+        else if (selectedTilePosition.y < -4) {
+            selectedTilePosition.y = -4;
+        }
+        
+        
         selectedTileObject.transform.position = selectedTilePosition;
     }
 }
