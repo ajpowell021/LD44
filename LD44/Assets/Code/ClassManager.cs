@@ -13,6 +13,7 @@ public class ClassManager : MonoBehaviour {
     public AgeManager ageManager;
     public FarmerMovement farmerMovement;
     public PlayerInventory playerInventory;
+    public SpriteManager spriteManager;
     
     private void Awake() {
         setInstance();
@@ -33,5 +34,6 @@ public class ClassManager : MonoBehaviour {
         ageManager = gameObject.GetComponent<AgeManager>();
         farmerMovement = farmerObject.GetComponent<FarmerMovement>();
         playerInventory = farmerObject.GetComponent<PlayerInventory>();
+        spriteManager = gameObject.GetComponent<SpriteManager>();
     }
 }
