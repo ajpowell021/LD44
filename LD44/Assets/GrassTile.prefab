@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1908027690466274717}
   - component: {fileID: 7100942142981898019}
+  - component: {fileID: 5301862476941468711}
   m_Layer: 0
   m_Name: GrassTile
-  m_TagString: Untagged
+  m_TagString: GroundTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,3 +80,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5301862476941468711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8325695184012303646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e669675cf8a9f0b4f9a0a1bb0b1071dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassSprite: {fileID: 21300000, guid: f58d2aba42baa624187a4ed9c37d4c48, type: 3}
+  dirtSprite: {fileID: 21300000, guid: 5e47e383041ecb048a4b1eb01bac66f7, type: 3}
+  currentGroundType: 0

@@ -12,12 +12,15 @@
           <e p="DropItem.cs" t="Include" />
           <e p="Enums.cs" t="Include" />
           <e p="FarmerMovement.cs" t="Include" />
+          <e p="GroundTileController.cs" t="Include" />
+          <e p="GroundTileManager.cs" t="Include" />
           <e p="InputManager.cs" t="Include" />
           <e p="PickUp.cs" t="Include" />
           <e p="PlayerInventory.cs" t="Include" />
           <e p="PrefabManager.cs" t="Include" />
           <e p="SelectedTileController.cs" t="Include" />
           <e p="SpriteManager.cs" t="Include" />
+          <e p="UseItem.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">

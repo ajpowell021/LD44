@@ -9,10 +9,12 @@ public class InputManager : MonoBehaviour {
    // Classes
    private FarmerMovement farmerMovement;
    private PlayerInventory playerInventory;
+   private UseItem useItem;
 
    private void Start() {
       farmerMovement = ClassManager.instance.farmerMovement;
       playerInventory = ClassManager.instance.playerInventory;
+      useItem = ClassManager.instance.useItem;
    }
 
    private void Update() {
@@ -35,6 +37,10 @@ public class InputManager : MonoBehaviour {
          }
 
          if (Input.GetKeyDown(KeyCode.Space)) {
+            useItem.useEquippedItem();
+         }
+
+         if (Input.GetKeyDown(KeyCode.Z)) {
             playerInventory.dropInventoryItem();
          }
       }

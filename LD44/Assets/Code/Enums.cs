@@ -13,3 +13,8 @@ public enum ItemType {
     CornSeed,
     Hoe
 }
+
+public enum GroundType {
+    Grass,
+    Dirt
+}
