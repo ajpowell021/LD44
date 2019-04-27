@@ -80,12 +80,10 @@ public class FoodManager : MonoBehaviour {
     private void setSelectedText() {
         for (int i = 0; i < recipeTextObjects.Count; i++) {
             if (i == selectedRecipeIndex) {
-                Debug.Log("colored name: " + recipeTextObjects[i].name);
                 recipeTextObjects[i].GetComponent<TextMeshProUGUI>().color = selectedColor;
             }
             else {
-                Debug.Log("uncolored name: " + recipeTextObjects[i].name);
-                recipeTextObjects[selectedRecipeIndex].GetComponent<TextMeshProUGUI>().color = unselectedColor;
+                recipeTextObjects[i].GetComponent<TextMeshProUGUI>().color = unselectedColor;
             }
         }
         
