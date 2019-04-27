@@ -79,4 +79,16 @@ public class PlantManager : MonoBehaviour {
                 return 0;
         }
     }
+
+    public ItemType getItemTypeFromPlantType(PlantType plantType) {
+        switch (plantType) {
+            case PlantType.Corn:
+                return ItemType.Corn;
+            case PlantType.Carrot:
+                return ItemType.Carrot;
+            default:
+                Debug.Log("Error: No matching item type for plant type");
+                return ItemType.Corn;
+        }
+    }
 }

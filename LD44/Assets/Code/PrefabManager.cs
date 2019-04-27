@@ -8,14 +8,15 @@ public class PrefabManager : MonoBehaviour {
     public GameObject cornSeedObject;
     public GameObject grassObject;
     public GameObject hoeObject;
+    public GameObject cornObject;
 
-//    private void Awake() {
-//        for (int i = -10; i < 10; i++) {
-//            for (int j = -4; j < 5; j++) {
-//                Instantiate(grassObject, new Vector3(i, j, 0), Quaternion.identity);
-//            }
-//        }
-//    }
+    private void Awake() {
+        for (int i = -10; i < 11; i++) {
+            for (int j = -4; j < 6; j++) {
+                Instantiate(grassObject, new Vector3(i, j, 0), Quaternion.identity);
+            }
+        }
+    }
 
     public GameObject getObjectByItemType(ItemType item) {
         switch (item) {
@@ -25,6 +26,8 @@ public class PrefabManager : MonoBehaviour {
                 return cornSeedObject;
             case ItemType.Hoe:
                 return hoeObject;
+            case ItemType.Corn:
+                return cornObject;
             default:
                 Debug.Log("Asked for game object for non existing item type.");
                 return null;

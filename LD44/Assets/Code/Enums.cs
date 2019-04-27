@@ -12,7 +12,9 @@ public enum ItemType {
     WaterCan,
     CornSeed,
     Hoe,
-    CarrotSeed
+    CarrotSeed,
+    Corn,
+    Carrot
 }
 
 public enum GroundType {

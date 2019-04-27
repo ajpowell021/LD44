@@ -7,7 +7,7 @@ public class GroundTileController : MonoBehaviour {
     public Sprite grassSprite;
     public Sprite dirtSprite;
     public GroundType currentGroundType;
-    private Plant plant;
+    public Plant plant;
 
     private SpriteRenderer spriteRenderer;
 
@@ -17,7 +17,7 @@ public class GroundTileController : MonoBehaviour {
     }
 
     public void groundHitWithHoe() {
-        if (currentGroundType == GroundType.Dirt) {
+        if (currentGroundType == GroundType.Dirt && !plant.seedPresent) {
             currentGroundType = GroundType.Grass;
         }
         else {

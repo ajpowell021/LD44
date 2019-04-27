@@ -12,6 +12,7 @@ public class Plant : MonoBehaviour {
     public int plantLevel;
     private bool growing;
     public bool canBePicked;
+    public bool seedPresent;
 
     private SpriteRenderer spriteRenderer;
     private PlantManager plantManager;
@@ -37,6 +38,16 @@ public class Plant : MonoBehaviour {
         timeToGrow = plantManager.getGrowTimeByPlantType(plantType);
         growRate = plantManager.getGrowRateFromPlantType(plantType);
         growing = true;
+        seedPresent = true;
+    }
+
+    public void pickPlant() {
+        plantLevel = 0;
+        plantSprite = null;
+        spriteRenderer.sprite = null;
+        canBePicked = false;
+        seedPresent = false;
+        currentGrowPercentage = 0;
     }
 
     private void growPlant() {

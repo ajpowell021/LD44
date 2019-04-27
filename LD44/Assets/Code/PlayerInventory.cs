@@ -28,6 +28,11 @@ public class PlayerInventory : MonoBehaviour {
         equippedItemImage.sprite = spriteManager.getSpriteByItemType(ItemType.None);
     }
 
+    public void deleteInventoryItem() {
+        heldItem = ItemType.None;
+        equippedItemImage.sprite = spriteManager.getSpriteByItemType(ItemType.None);
+    }
+
     public void attemptPickup(GameObject item) {
         if (heldItem == ItemType.None) {
             setNewInventoryItem(item.GetComponent<PickUp>().itemType);
