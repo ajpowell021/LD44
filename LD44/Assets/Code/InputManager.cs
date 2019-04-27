@@ -19,6 +19,11 @@ public class InputManager : MonoBehaviour {
       useItem = ClassManager.instance.useItem;
    }
 
+   public IEnumerator changeInputMode(InputMode newMode) {
+      yield return new WaitForEndOfFrame();
+      currentInputMode = newMode;
+   }
+
    private void Update() {
 
       if (currentInputMode == InputMode.Play) {
@@ -50,6 +55,10 @@ public class InputManager : MonoBehaviour {
       if (currentInputMode == InputMode.RecipeMenu) {
          if (Input.GetKeyDown(KeyCode.Escape)) {
             foodManager.toggleRecipePanel();
+         }
+
+         if (Input.GetKeyDown(KeyCode.Space)) {
+            foodManager.executeSelectedAction();
          }
 
          if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {

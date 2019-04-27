@@ -25,7 +25,9 @@ public class UseItem : MonoBehaviour {
         GroundTileController controller = groundTileManager.getTileByPosition(selectedTileController.selectedTilePosition);
 
         if (selectedTileController.selectedTilePosition == groundTileManager.ovenPosition) {
-            foodManager.toggleRecipePanel();
+            if (!foodManager.isCooking) {
+                foodManager.toggleRecipePanel();
+            }
         }
         else { 
             switch (item) {
@@ -68,6 +70,15 @@ public class UseItem : MonoBehaviour {
                         playerInventory.deleteInventoryItem();
                         ageManager.eatFood(foodManager.getAgeFromItemType(item));
                     }
+                    break;
+                case ItemType.RecipeOne:
+                case ItemType.RecipeTwo:
+                case ItemType.RecipeThree:
+                case ItemType.RecipeFour:
+                case ItemType.RecipeFive:
+                case ItemType.RecipeSix:
+                    playerInventory.deleteInventoryItem();
+                    ageManager.eatFood(foodManager.getAgeFromItemType(item));
                     break;
                 case ItemType.None:
                     if (controller.plant.canBePicked) {

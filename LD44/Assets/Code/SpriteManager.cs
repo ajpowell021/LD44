@@ -9,6 +9,12 @@ public class SpriteManager : MonoBehaviour {
     public Sprite cornSeedSprite;
     public Sprite hoeSprite;
     public Sprite cornSprite;
+    public Sprite recipeOneSprite;
+    public Sprite recipeTwoSprite;
+    public Sprite recipeThreeSprite;
+    public Sprite recipeFourSprite;
+    public Sprite recipeFiveSprite;
+    public Sprite recipeSixSprite;
 
     public Sprite getSpriteByItemType(ItemType itemType) {
         switch (itemType) {
@@ -22,6 +28,18 @@ public class SpriteManager : MonoBehaviour {
                 return hoeSprite;
             case ItemType.Corn:
                 return cornSprite;
+            case ItemType.RecipeOne:
+                return recipeOneSprite;
+            case ItemType.RecipeTwo:
+                return recipeTwoSprite;
+            case ItemType.RecipeThree:
+                return recipeThreeSprite;
+            case ItemType.RecipeFour:
+                return recipeFourSprite;
+            case ItemType.RecipeFive:
+                return recipeFiveSprite;
+            case ItemType.RecipeSix:
+                return recipeSixSprite;
             default:
                 Debug.Log("Unrecognized sprite in getSprite;");
                 return waterCanSprite;

@@ -15,7 +15,16 @@ public enum ItemType {
     Hoe,
     CarrotSeed,
     Corn,
-    Carrot
+    Carrot,
+    RecipeOne,
+    RecipeTwo,
+    RecipeThree,
+    RecipeFour,
+    RecipeFive,
+    RecipeSix,
+    Potatoe,
+    Veg4,
+    Veg5
 }
 
 public enum GroundType {
