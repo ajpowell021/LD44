@@ -12,6 +12,8 @@
           <e p="Enums.cs" t="Include" />
           <e p="FarmerMovement.cs" t="Include" />
           <e p="InputManager.cs" t="Include" />
+          <e p="PickUp.cs" t="Include" />
+          <e p="PlayerInventory.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">

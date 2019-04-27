@@ -8,9 +8,11 @@ public class InputManager : MonoBehaviour {
    
    // Classes
    private FarmerMovement farmerMovement;
+   private PlayerInventory playerInventory;
 
    private void Start() {
       farmerMovement = ClassManager.instance.farmerMovement;
+      playerInventory = ClassManager.instance.playerInventory;
    }
 
    private void Update() {
@@ -30,7 +32,11 @@ public class InputManager : MonoBehaviour {
       
          if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
             farmerMovement.move(Vector3.right);
-         }   
+         }
+
+         if (Input.GetKeyDown(KeyCode.Space)) {
+            playerInventory.dropInventoryItem();
+         }
       }
    }
 }

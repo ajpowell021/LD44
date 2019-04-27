@@ -6,3 +6,9 @@ public enum InputMode {
     Play,
     MainMenu
 }
+
+public enum ItemType {
+    None,
+    WaterCan,
+    CornSeed,
+}
