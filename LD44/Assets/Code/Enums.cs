@@ -11,4 +11,5 @@ public enum ItemType {
     None,
     WaterCan,
     CornSeed,
+    Hoe
 }

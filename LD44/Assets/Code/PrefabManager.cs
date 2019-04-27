@@ -7,6 +7,7 @@ public class PrefabManager : MonoBehaviour {
     public GameObject waterCanObject;
     public GameObject cornSeedObject;
     public GameObject grassObject;
+    public GameObject hoeObject;
 
     public GameObject getObjectByItemType(ItemType item) {
         switch (item) {
@@ -14,6 +15,8 @@ public class PrefabManager : MonoBehaviour {
                 return waterCanObject;
             case ItemType.CornSeed:
                 return cornSeedObject;
+            case ItemType.Hoe:
+                return hoeObject;
             default:
                 Debug.Log("Asked for game object for non existing item type.");
                 return null;
