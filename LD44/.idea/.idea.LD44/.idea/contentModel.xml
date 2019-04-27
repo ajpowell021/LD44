@@ -9,6 +9,7 @@
         <e p="Code" t="Include">
           <e p="AgeManager.cs" t="Include" />
           <e p="ClassManager.cs" t="Include" />
+          <e p="Enums.cs" t="Include" />
           <e p="FarmerMovement.cs" t="Include" />
           <e p="InputManager.cs" t="Include" />
         </e>
