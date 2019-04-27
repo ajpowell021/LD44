@@ -9,11 +9,13 @@ public class InputManager : MonoBehaviour {
    // Classes
    private FarmerMovement farmerMovement;
    private PlayerInventory playerInventory;
+   private FoodManager foodManager;
    private UseItem useItem;
 
    private void Start() {
       farmerMovement = ClassManager.instance.farmerMovement;
       playerInventory = ClassManager.instance.playerInventory;
+      foodManager = ClassManager.instance.foodManager;
       useItem = ClassManager.instance.useItem;
    }
 
@@ -42,6 +44,19 @@ public class InputManager : MonoBehaviour {
 
          if (Input.GetKeyDown(KeyCode.Z)) {
             playerInventory.dropInventoryItem();
+         }
+      }
+
+      if (currentInputMode == InputMode.RecipeMenu) {
+         if (Input.GetKeyDown(KeyCode.Escape)) {
+            foodManager.toggleRecipePanel();
+         }
+
+         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
+            foodManager.adjustSelectedRecipeIndex(1);
+         }
+         else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
+            foodManager.adjustSelectedRecipeIndex(-1);
          }
       }
    }
