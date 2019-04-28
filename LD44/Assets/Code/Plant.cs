@@ -17,6 +17,7 @@ public class Plant : MonoBehaviour {
 
     private SpriteRenderer spriteRenderer;
     private PlantManager plantManager;
+    private GroundTileManager groundTileManager;
 
     private void Awake() {
         spriteRenderer = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
@@ -24,6 +25,7 @@ public class Plant : MonoBehaviour {
 
     private void Start() {
         plantManager = ClassManager.instance.plantManager;
+        groundTileManager = ClassManager.instance.groundTileManager;
     }
 
     private void Update() {
@@ -38,7 +40,7 @@ public class Plant : MonoBehaviour {
 
     public void waterGround() {
         watered = true;
-        // Add sprite logic for watering.
+        groundTileManager.setAllGroundSprites();
     }
 
     public void plantPlant(ItemType itemType) {
@@ -89,7 +91,7 @@ public class Plant : MonoBehaviour {
         if (currentWaterCount >= plantManager.wateredLastsTime) {
             watered = false;
             currentWaterCount = 0;
-            // Change sprite to un watered.
+            groundTileManager.setAllGroundSprites();
         }
     }
 }

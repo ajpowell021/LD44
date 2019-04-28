@@ -13,7 +13,12 @@ public class GroundTileManager : MonoBehaviour {
         List<GameObject> tiles = getAllGroundTiles();
         for (int i = 0; i < tiles.Count; i++) {
             if (tiles[i].GetComponent<GroundTileController>().currentGroundType == GroundType.Dirt) {
-                tiles[i].GetComponent<TilledGroundArtSetter>().detectAndSetSprite();    
+                if (tiles[i].GetComponent<GroundTileController>().plant.watered) {
+                    tiles[i].GetComponent<WateredTileChanger>().setWateredSprite();
+                }
+                else {
+                    tiles[i].GetComponent<TilledGroundArtSetter>().detectAndSetSprite();    
+                }
             }
             else {
                 tiles[i].GetComponent<DirtArtSetter>().detectAndSetSprite();
