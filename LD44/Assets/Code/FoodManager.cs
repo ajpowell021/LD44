@@ -83,6 +83,15 @@ public class FoodManager : MonoBehaviour {
             case ItemType.Carrot:
                 carrotCount++;
                 break;
+            case ItemType.Potatoe:
+                potatoesCount++;
+                break;
+            case ItemType.Veg4:
+                veg4Count++;
+                break;
+            case ItemType.Veg5:
+                veg5Count++;
+                break;
             default:
                 Debug.Log("No food count matching item type");
                 break;

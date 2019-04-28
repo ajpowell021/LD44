@@ -41,25 +41,21 @@ public class UseItem : MonoBehaviour {
                         controller.groundHitWithHoe();      
                     }  
                     break;
+                case ItemType.CarrotSeed:
+                case ItemType.PotatoeSeed:
                 case ItemType.CornSeed:
+                case ItemType.Veg4Seed:
+                case ItemType.Veg5Seed:
                     if (controller.currentGroundType == GroundType.Dirt && !controller.plant.seedPresent) {
                         controller.plantSeed(item);
                         playerInventory.deleteInventoryItem();
                     }
                     break;
-                case ItemType.Corn:
-                    if (selectedTileController.selectedTilePosition == groundTileManager.cratePosition) {
-                        // store it
-                        foodManager.addItemToStorage(item);
-                        playerInventory.deleteInventoryItem();
-                    }
-                    else {
-                        // eat it
-                        playerInventory.deleteInventoryItem();
-                        ageManager.eatFood(foodManager.getAgeFromItemType(item));
-                    }
-                    break;
                 case ItemType.Carrot:
+                case ItemType.Potatoe:
+                case ItemType.Veg4:
+                case ItemType.Veg5:
+                case ItemType.Corn:
                     if (selectedTileController.selectedTilePosition == groundTileManager.cratePosition) {
                         // store it
                         foodManager.addItemToStorage(item);

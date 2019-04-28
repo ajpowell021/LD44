@@ -24,7 +24,10 @@ public enum ItemType {
     RecipeSix,
     Potatoe,
     Veg4,
-    Veg5
+    Veg5,
+    PotatoeSeed,
+    Veg4Seed,
+    Veg5Seed
 }
 
 public enum GroundType {
@@ -34,5 +37,8 @@ public enum GroundType {
 
 public enum PlantType {
     Corn,
-    Carrot
+    Carrot,
+    Potato,
+    Veg4,
+    Veg5
 }

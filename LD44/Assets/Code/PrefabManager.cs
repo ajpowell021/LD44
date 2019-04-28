@@ -5,10 +5,23 @@ using UnityEngine;
 public class PrefabManager : MonoBehaviour {
 
     public GameObject waterCanObject;
-    public GameObject cornSeedObject;
     public GameObject grassObject;
     public GameObject hoeObject;
+    
+    public GameObject cornSeedObject;
     public GameObject cornObject;
+
+    public GameObject carrotSeedObject;
+    public GameObject carrotObject;
+
+    public GameObject potatoSeedObject;
+    public GameObject potatoObject;
+
+    public GameObject veg4SeedObject;
+    public GameObject veg4Object;
+
+    public GameObject veg5SeedObject;
+    public GameObject veg5Object;
 
     public GameObject recipeOneObject;
     public GameObject recipeTwoObject;
@@ -29,12 +42,28 @@ public class PrefabManager : MonoBehaviour {
         switch (item) {
             case ItemType.WaterCan:
                 return waterCanObject;
-            case ItemType.CornSeed:
-                return cornSeedObject;
             case ItemType.Hoe:
                 return hoeObject;
+            case ItemType.CornSeed:
+                return cornSeedObject;
             case ItemType.Corn:
                 return cornObject;
+            case ItemType.CarrotSeed:
+                return carrotSeedObject;
+            case ItemType.Carrot:
+                return carrotObject;
+            case ItemType.PotatoeSeed:
+                return potatoSeedObject;
+            case ItemType.Potatoe:
+                return potatoObject;
+            case ItemType.Veg4Seed:
+                return veg4SeedObject;
+            case ItemType.Veg4:
+                return veg4Object;
+            case ItemType.Veg5Seed:
+                return veg5SeedObject;
+            case ItemType.Veg5:
+                return veg5Object;
             case ItemType.RecipeOne:
                 return recipeOneObject;
             case ItemType.RecipeTwo:

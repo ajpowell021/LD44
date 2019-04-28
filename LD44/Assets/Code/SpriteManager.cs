@@ -7,8 +7,16 @@ public class SpriteManager : MonoBehaviour {
     public Sprite noneSprite;
     public Sprite waterCanSprite;
     public Sprite cornSeedSprite;
-    public Sprite hoeSprite;
     public Sprite cornSprite;
+    public Sprite carrotSeedSprite;
+    public Sprite carrotSprite;
+    public Sprite potatoSeedSprite;
+    public Sprite potatoSprite;
+    public Sprite veg4SeedSprite;
+    public Sprite veg4Sprite;
+    public Sprite veg5SeedSprite;
+    public Sprite veg5Sprite;
+    public Sprite hoeSprite;
     public Sprite recipeOneSprite;
     public Sprite recipeTwoSprite;
     public Sprite recipeThreeSprite;
@@ -22,12 +30,28 @@ public class SpriteManager : MonoBehaviour {
                 return noneSprite;
             case ItemType.WaterCan:
                 return waterCanSprite;
-            case ItemType.CornSeed:
-                return cornSeedSprite;
             case ItemType.Hoe:
                 return hoeSprite;
+            case ItemType.CornSeed:
+                return cornSeedSprite;
             case ItemType.Corn:
                 return cornSprite;
+            case ItemType.CarrotSeed:
+                return carrotSeedSprite;
+            case ItemType.Carrot:
+                return carrotSprite;
+            case ItemType.PotatoeSeed:
+                return potatoSeedSprite;
+            case ItemType.Potatoe:
+                return potatoSprite;
+            case ItemType.Veg4Seed:
+                return veg4SeedSprite;
+            case ItemType.Veg4:
+                return veg4Sprite;
+            case ItemType.Veg5Seed:
+                return veg5SeedSprite;
+            case ItemType.Veg5:
+                return veg5Sprite;
             case ItemType.RecipeOne:
                 return recipeOneSprite;
             case ItemType.RecipeTwo:
