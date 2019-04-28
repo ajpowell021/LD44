@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc210c4d-9d58-4a50-8d29-dfe1f3fc16eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LD44/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD44/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LD44/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD44/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LD44/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD44/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GroundTileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GroundTileManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Plant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Plant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-    </list>
+    <list default="true" id="dc210c4d-9d58-4a50-8d29-dfe1f3fc16eb" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Code/Plant.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="784">
@@ -165,10 +158,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Code/GroundTileController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
+            <state relative-caret-position="713">
               <caret line="29" column="29" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="29" />
               <folding>
                 <marker date="1556491473931" expanded="false" signature="6:78" ph="..." />
@@ -422,12 +415,12 @@
       <workItem from="1556461695415" duration="8611000" />
       <workItem from="1556475965800" duration="1237000" />
       <workItem from="1556485326168" duration="263000" />
-      <workItem from="1556492289173" duration="949000" />
+      <workItem from="1556492289173" duration="1299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47956000" />
+    <option name="totallyTimeSpent" value="48306000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -765,26 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Code/GroundTileController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="29" />
-          <folding>
-            <marker date="1556491473931" expanded="false" signature="6:78" ph="..." />
-            <marker date="1556491473931" expanded="true" signature="130:1282" ph="{...}" />
-            <marker date="1556491473931" expanded="true" signature="382:507" ph="{...}" />
-            <marker date="1556491473931" expanded="true" signature="534:610" ph="{...}" />
-            <marker date="1556491473931" expanded="true" signature="647:968" ph="{...}" />
-            <marker date="1556491473931" expanded="true" signature="721:835" ph="{...}" />
-            <marker date="1556491473931" expanded="true" signature="835:962" ph="{...}" />
-            <marker date="1556491473931" expanded="true" signature="1015:1058" ph="{...}" />
-            <marker date="1556491473931" expanded="true" signature="1089:1280" ph="{...}" />
-            <marker date="1556491473931" expanded="true" signature="1141:1200" ph="{...}" />
-            <marker date="1556491473931" expanded="true" signature="1200:1274" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Code/Enums.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -997,6 +970,26 @@
             <marker date="1556495163834" expanded="true" signature="2229:2364" ph="{...}" />
             <marker date="1556495163834" expanded="true" signature="2400:2645" ph="{...}" />
             <marker date="1556495163834" expanded="true" signature="2511:2639" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Code/GroundTileController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="29" />
+          <folding>
+            <marker date="1556491473931" expanded="false" signature="6:78" ph="..." />
+            <marker date="1556491473931" expanded="true" signature="130:1282" ph="{...}" />
+            <marker date="1556491473931" expanded="true" signature="382:507" ph="{...}" />
+            <marker date="1556491473931" expanded="true" signature="534:610" ph="{...}" />
+            <marker date="1556491473931" expanded="true" signature="647:968" ph="{...}" />
+            <marker date="1556491473931" expanded="true" signature="721:835" ph="{...}" />
+            <marker date="1556491473931" expanded="true" signature="835:962" ph="{...}" />
+            <marker date="1556491473931" expanded="true" signature="1015:1058" ph="{...}" />
+            <marker date="1556491473931" expanded="true" signature="1089:1280" ph="{...}" />
+            <marker date="1556491473931" expanded="true" signature="1141:1200" ph="{...}" />
+            <marker date="1556491473931" expanded="true" signature="1200:1274" ph="{...}" />
           </folding>
         </state>
       </provider>
