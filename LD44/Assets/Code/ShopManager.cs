@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class ShopManager : MonoBehaviour {
 
     public GameObject shopPanel;
+    public GameObject selector;
+
+    public int currentSelectedItem;
 
     public float currentTimeToRestock;
     public float maxRestockTime;
@@ -27,19 +30,17 @@ public class ShopManager : MonoBehaviour {
     public Image imageThree;
 
     private SpriteManager spriteManager;
-
-//    public List<ItemType> itemsThatCanBeSold = new List<ItemType> {
-//        ItemType.CornSeed,
-//        ItemType.CarrotSeed,
-//        ItemType.PotatoeSeed,
-//        ItemType.Veg4Seed,
-//        ItemType.Veg5Seed
-//    };
+    private InputManager inputManager;
+    private AgeManager ageManager;
+    private PrefabManager prefabManager;
 
     public List<ItemType> itemsThatCanBeSold = new List<ItemType>();
 
     private void Start() {
         spriteManager = ClassManager.instance.spriteManager;
+        inputManager = ClassManager.instance.inputManager;
+        ageManager = ClassManager.instance.ageManager;
+        prefabManager = ClassManager.instance.prefabManager;
         restock();
     }
 
@@ -49,11 +50,19 @@ public class ShopManager : MonoBehaviour {
 
     public void toggleShopPanel() {
         shopPanel.SetActive(!shopPanel.activeInHierarchy);
+        if (!shopPanel.activeInHierarchy) {
+            currentSelectedItem = 0;
+            inputManager.currentInputMode = InputMode.Play;
+        }
+        else {
+            inputManager.currentInputMode = InputMode.ShopMenu;
+            moveSelector(0);
+        }
     }
 
     private void updateRestockTime() {
         currentTimeToRestock += Time.deltaTime;
-        restockTime.text = "Restock in: " + (30 - Mathf.FloorToInt(currentTimeToRestock)) + "s";
+        restockTime.text = "Restock in: " + (30 - Mathf.FloorToInt(currentTimeToRestock)) + " seconds";
         if (currentTimeToRestock >= maxRestockTime) {
             restock();
         }
@@ -105,5 +114,61 @@ public class ShopManager : MonoBehaviour {
     
         Debug.Log("No description for item");
         return "ERROR";
+    }
+
+    public void moveSelector(int adjust) {
+        currentSelectedItem += adjust;
+
+        if (currentSelectedItem == -1) {
+            currentSelectedItem = 3;
+        }
+        else if (currentSelectedItem == 4) {
+            currentSelectedItem = 0;
+        }
+
+        switch (currentSelectedItem) {
+            case 0:
+                selector.transform.localPosition = new Vector3(-9.5f, 225, 0);
+                break;
+            case 1:
+                selector.transform.localPosition = new Vector3(-9.5f, 81, 0);
+                break;
+            case 2:
+                selector.transform.localPosition = new Vector3(-9.5f, -64, 0);
+                break;
+            case 3:
+                selector.transform.localPosition = new Vector3(-9.5f, -216, 0);
+                break;
+        }
+    }
+
+    public void makeSelection() {
+        switch (currentSelectedItem) {
+            case 0:
+                purchaseItem(itemOne);
+                break;
+            case 1:
+                purchaseItem(itemTwo);
+                break;
+            case 2:
+                purchaseItem(itemThree);
+                break;
+            case 3:
+                toggleShopPanel();
+                break;
+        }
+    }
+
+    private void purchaseItem(ItemType itemType) {
+        switch (itemType) {
+            case ItemType.CornSeed:
+            case ItemType.CarrotSeed:
+            case ItemType.PotatoeSeed:
+            case ItemType.Veg4Seed:
+            case ItemType.Veg5Seed:
+                ageManager.eatFood(-seedPrice);
+                Instantiate(prefabManager.getObjectByItemType(itemType), new Vector3(9, 5, 0), Quaternion.identity);
+                break;
+        }
     }
 }

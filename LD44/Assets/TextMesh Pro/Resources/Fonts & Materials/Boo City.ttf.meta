@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f333f38d7376b6e4f9bb5c138eb34780
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Boo City
+  fontNames:
+  - Boo City
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5e7a47e6c690dbe41b5fb7c583053971, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

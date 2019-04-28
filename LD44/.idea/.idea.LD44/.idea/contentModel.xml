@@ -26,6 +26,11 @@
           <e p="SpriteManager.cs" t="Include" />
           <e p="UseItem.cs" t="Include" />
         </e>
+        <e p="Font" t="Include">
+          <e p="boo-city" t="Include">
+            <e p="OFL.txt" t="Include" />
+          </e>
+        </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">
             <e p="LineBreaking Following Characters.txt" t="Include" />

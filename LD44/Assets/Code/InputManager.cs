@@ -11,12 +11,14 @@ public class InputManager : MonoBehaviour {
    private PlayerInventory playerInventory;
    private FoodManager foodManager;
    private UseItem useItem;
+   private ShopManager shopManager;
 
    private void Start() {
       farmerMovement = ClassManager.instance.farmerMovement;
       playerInventory = ClassManager.instance.playerInventory;
       foodManager = ClassManager.instance.foodManager;
       useItem = ClassManager.instance.useItem;
+      shopManager = ClassManager.instance.shopManager;
    }
 
    public IEnumerator changeInputMode(InputMode newMode) {
@@ -51,8 +53,7 @@ public class InputManager : MonoBehaviour {
             playerInventory.dropInventoryItem();
          }
       }
-
-      if (currentInputMode == InputMode.RecipeMenu) {
+      else if (currentInputMode == InputMode.RecipeMenu) {
          if (Input.GetKeyDown(KeyCode.Escape)) {
             foodManager.toggleRecipePanel();
          }
@@ -66,6 +67,22 @@ public class InputManager : MonoBehaviour {
          }
          else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
             foodManager.adjustSelectedRecipeIndex(-1);
+         }
+      }
+      else if (currentInputMode == InputMode.ShopMenu) {
+         if (Input.GetKeyDown(KeyCode.Escape)) {
+            shopManager.toggleShopPanel();
+         }
+
+         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
+            shopManager.moveSelector(-1);
+         }
+         else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
+            shopManager.moveSelector(1);
+         }
+
+         if (Input.GetKeyDown(KeyCode.Space)) {
+            shopManager.makeSelection();
          }
       }
    }

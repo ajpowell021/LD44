@@ -5,7 +5,8 @@ using UnityEngine;
 public enum InputMode {
     Play,
     MainMenu,
-    RecipeMenu
+    RecipeMenu,
+    ShopMenu
 }
 
 public enum ItemType {
