@@ -21,6 +21,7 @@ public class ClassManager : MonoBehaviour {
     public GroundTileManager groundTileManager;
     public PlantManager plantManager;
     public FoodManager foodManager;
+    public ShopManager shopManager;
     
     private void Awake() {
         setInstance();
@@ -49,5 +50,6 @@ public class ClassManager : MonoBehaviour {
         groundTileManager = gameObject.GetComponent<GroundTileManager>();
         plantManager = gameObject.GetComponent<PlantManager>();
         foodManager = gameObject.GetComponent<FoodManager>();
+        shopManager = gameObject.GetComponent<ShopManager>();
     }
 }

@@ -10,6 +10,7 @@ public class UseItem : MonoBehaviour {
     private PlantManager plantManager;
     private AgeManager ageManager;
     private FoodManager foodManager;
+    private ShopManager shopManager;
 
     private void Start() {
         playerInventory = ClassManager.instance.playerInventory;
@@ -18,6 +19,7 @@ public class UseItem : MonoBehaviour {
         plantManager = ClassManager.instance.plantManager;
         ageManager = ClassManager.instance.ageManager;
         foodManager = ClassManager.instance.foodManager;
+        shopManager = ClassManager.instance.shopManager;
     }
 
     public void useEquippedItem() {
@@ -31,6 +33,7 @@ public class UseItem : MonoBehaviour {
         }
         else if (selectedTileController.selectedTilePosition == groundTileManager.vendingMachinePosition) {
             // Open shop menu.
+            shopManager.toggleShopPanel();
         }
         else { 
             switch (item) {

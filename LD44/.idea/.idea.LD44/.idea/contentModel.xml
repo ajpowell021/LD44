@@ -22,6 +22,7 @@
           <e p="PlayerInventory.cs" t="Include" />
           <e p="PrefabManager.cs" t="Include" />
           <e p="SelectedTileController.cs" t="Include" />
+          <e p="ShopManager.cs" t="Include" />
           <e p="SpriteManager.cs" t="Include" />
           <e p="UseItem.cs" t="Include" />
         </e>
