@@ -10,20 +10,26 @@ public class GroundTileController : MonoBehaviour {
     public Plant plant;
 
     private SpriteRenderer spriteRenderer;
-
+    private GroundTileManager groundTileManager;
+    
     private void Awake() {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         plant = gameObject.GetComponent<Plant>();
     }
 
+    private void Start() {
+        groundTileManager = ClassManager.instance.groundTileManager;
+    }
+
     public void groundHitWithHoe() {
         if (currentGroundType == GroundType.Dirt && !plant.seedPresent) {
             currentGroundType = GroundType.Grass;
+            groundTileManager.setAllGroundSprites();
         }
         else {
             currentGroundType = GroundType.Dirt;
+            groundTileManager.setAllGroundSprites();
         }
-        setSprite();
     }
 
     public void plantSeed(ItemType seedType) {

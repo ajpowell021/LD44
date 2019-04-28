@@ -9,6 +9,18 @@ public class GroundTileManager : MonoBehaviour {
     public Vector3 ovenPosition;
     public Vector3 vendingMachinePosition;
 
+    public void setAllGroundSprites() {
+        List<GameObject> tiles = getAllGroundTiles();
+        for (int i = 0; i < tiles.Count; i++) {
+            if (tiles[i].GetComponent<GroundTileController>().currentGroundType == GroundType.Dirt) {
+                tiles[i].GetComponent<TilledGroundArtSetter>().detectAndSetSprite();    
+            }
+            else {
+                tiles[i].GetComponent<DirtArtSetter>().detectAndSetSprite();
+            }
+        }
+    }
+
     public List<GameObject> getAllGroundTiles() {
         return GameObject.FindGameObjectsWithTag("GroundTile").ToList();
     }
@@ -20,7 +32,7 @@ public class GroundTileManager : MonoBehaviour {
                 return tiles[i].GetComponent<GroundTileController>();
             }
         }
-        Debug.Log("No Tile Found By That Position");
+       // Debug.Log("No Tile Found By That Position");
         return null;
     }
 }

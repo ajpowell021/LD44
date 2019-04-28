@@ -9,6 +9,7 @@
         <e p="Code" t="Include">
           <e p="AgeManager.cs" t="Include" />
           <e p="ClassManager.cs" t="Include" />
+          <e p="DirtArtSetter.cs" t="Include" />
           <e p="DropItem.cs" t="Include" />
           <e p="Enums.cs" t="Include" />
           <e p="FarmerMovement.cs" t="Include" />
@@ -25,6 +26,7 @@
           <e p="SelectedTileController.cs" t="Include" />
           <e p="ShopManager.cs" t="Include" />
           <e p="SpriteManager.cs" t="Include" />
+          <e p="TilledGroundArtSetter.cs" t="Include" />
           <e p="UseItem.cs" t="Include" />
         </e>
         <e p="Font" t="Include">
