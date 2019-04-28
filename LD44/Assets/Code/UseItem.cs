@@ -29,6 +29,9 @@ public class UseItem : MonoBehaviour {
                 foodManager.toggleRecipePanel();
             }
         }
+        else if (selectedTileController.selectedTilePosition == groundTileManager.vendingMachinePosition) {
+            // Open shop menu.
+        }
         else { 
             switch (item) {
                 case ItemType.WaterCan:

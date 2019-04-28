@@ -7,6 +7,7 @@ public class GroundTileManager : MonoBehaviour {
 
     public Vector3 cratePosition;
     public Vector3 ovenPosition;
+    public Vector3 vendingMachinePosition;
 
     public List<GameObject> getAllGroundTiles() {
         return GameObject.FindGameObjectsWithTag("GroundTile").ToList();
