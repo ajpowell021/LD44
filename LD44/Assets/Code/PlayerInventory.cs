@@ -23,9 +23,11 @@ public class PlayerInventory : MonoBehaviour {
     }
 
     public void dropInventoryItem() {
-        dropItem.itemDropped(heldItem);
-        heldItem = ItemType.None;
-        equippedItemImage.sprite = spriteManager.getSpriteByItemType(ItemType.None);
+        if (heldItem != ItemType.None) {
+            dropItem.itemDropped(heldItem);
+            heldItem = ItemType.None;
+            equippedItemImage.sprite = spriteManager.getSpriteByItemType(ItemType.None);    
+        }
     }
 
     public void deleteInventoryItem() {
