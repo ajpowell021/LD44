@@ -16,6 +16,7 @@
           <e p="GroundTileController.cs" t="Include" />
           <e p="GroundTileManager.cs" t="Include" />
           <e p="InputManager.cs" t="Include" />
+          <e p="MainMenuManager.cs" t="Include" />
           <e p="PickUp.cs" t="Include" />
           <e p="Plant.cs" t="Include" />
           <e p="PlantManager.cs" t="Include" />

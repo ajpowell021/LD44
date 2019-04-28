@@ -6,7 +6,8 @@ public enum InputMode {
     Play,
     MainMenu,
     RecipeMenu,
-    ShopMenu
+    ShopMenu,
+    GameOver
 }
 
 public enum ItemType {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InputManager : MonoBehaviour {
 
@@ -83,6 +84,11 @@ public class InputManager : MonoBehaviour {
 
          if (Input.GetKeyDown(KeyCode.Space)) {
             shopManager.makeSelection();
+         }
+      }
+      else if (currentInputMode == InputMode.GameOver) {
+         if (Input.GetKeyDown(KeyCode.Escape)) {
+            SceneManager.LoadScene("MainMenu");
          }
       }
    }
