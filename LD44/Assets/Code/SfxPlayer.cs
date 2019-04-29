@@ -27,4 +27,9 @@ public class SfxPlayer : MonoBehaviour {
         playSound();
     }
 
+    public void playPurchaseSound() {
+        audioSource.clip = clips[1];
+        playSound();
+    }
+
 }

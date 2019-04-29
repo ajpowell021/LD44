@@ -33,6 +33,7 @@ public class ShopManager : MonoBehaviour {
     private InputManager inputManager;
     private AgeManager ageManager;
     private PrefabManager prefabManager;
+    private SfxPlayer sfxPlayer;
 
     public List<ItemType> itemsThatCanBeSold = new List<ItemType>();
 
@@ -41,6 +42,7 @@ public class ShopManager : MonoBehaviour {
         inputManager = ClassManager.instance.inputManager;
         ageManager = ClassManager.instance.ageManager;
         prefabManager = ClassManager.instance.prefabManager;
+        sfxPlayer = ClassManager.instance.sfxPlayer;
         restock();
     }
 
@@ -167,7 +169,8 @@ public class ShopManager : MonoBehaviour {
             case ItemType.PepperSeed:
             case ItemType.ChickpeaSeed:
                 ageManager.eatFood(-seedPrice);
-                Instantiate(prefabManager.getObjectByItemType(itemType), new Vector3(9, 5, 0), Quaternion.identity);
+                Instantiate(prefabManager.getObjectByItemType(itemType), new Vector3(1, 4, 0), Quaternion.identity);
+                sfxPlayer.playPurchaseSound();
                 break;
         }
     }
