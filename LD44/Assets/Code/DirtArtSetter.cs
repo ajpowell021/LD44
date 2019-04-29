@@ -7,7 +7,7 @@ public class DirtArtSetter : MonoBehaviour {
     // Sprites
     // Sides refer to the sides that have a tilled ground.
     public Sprite allSides;
-    public Sprite noSides;
+    public Sprite normalGrass;
 
     public Sprite topLeft;
     public Sprite topRight;
@@ -33,6 +33,7 @@ public class DirtArtSetter : MonoBehaviour {
 
     private void Awake() {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        normalGrass = spriteRenderer.sprite;
     }
 
     private void Start() {
@@ -71,7 +72,7 @@ public class DirtArtSetter : MonoBehaviour {
             spriteRenderer.sprite = bottomLeft;
         }
         else {
-            spriteRenderer.sprite = noSides;
+            spriteRenderer.sprite = normalGrass;
         }
     }
     
