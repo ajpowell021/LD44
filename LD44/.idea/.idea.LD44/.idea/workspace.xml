@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc210c4d-9d58-4a50-8d29-dfe1f3fc16eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Code/FarmerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/FarmerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GroundTileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GroundTileController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GroundTileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GroundTileManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/SelectedTileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/SelectedTileController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UseItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UseItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayScene.unity" afterDir="false" />
-    </list>
+    <list default="true" id="dc210c4d-9d58-4a50-8d29-dfe1f3fc16eb" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,24 +95,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Code/GroundTileManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="310">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
-                <marker date="1556554153925" expanded="false" signature="6:97" ph="..." />
-                <marker date="1556554153925" expanded="true" signature="146:1591" ph="{...}" />
-                <marker date="1556554153925" expanded="true" signature="383:1047" ph="{...}" />
-                <marker date="1556554153925" expanded="true" signature="485:1041" ph="{...}" />
-                <marker date="1556554153925" expanded="true" signature="587:921" ph="{...}" />
-                <marker date="1556554153925" expanded="true" signature="670:773" ph="{...}" />
-                <marker date="1556554153925" expanded="true" signature="773:907" ph="{...}" />
-                <marker date="1556554153925" expanded="true" signature="921:1031" ph="{...}" />
-                <marker date="1556554153925" expanded="true" signature="1097:1177" ph="{...}" />
-                <marker date="1556554153925" expanded="true" signature="1251:1589" ph="{...}" />
-                <marker date="1556554153925" expanded="true" signature="1353:1507" ph="{...}" />
-                <marker date="1556554153925" expanded="true" signature="1412:1497" ph="{...}" />
+                <marker date="1556554393904" expanded="false" signature="6:97" ph="..." />
+                <marker date="1556554393904" expanded="true" signature="146:1718" ph="{...}" />
+                <marker date="1556554393904" expanded="true" signature="383:1174" ph="{...}" />
+                <marker date="1556554393904" expanded="true" signature="485:1168" ph="{...}" />
+                <marker date="1556554393904" expanded="true" signature="620:1158" ph="{...}" />
+                <marker date="1556554393904" expanded="true" signature="691:1018" ph="{...}" />
+                <marker date="1556554393904" expanded="true" signature="743:854" ph="{...}" />
+                <marker date="1556554393904" expanded="true" signature="854:1000" ph="{...}" />
+                <marker date="1556554393904" expanded="true" signature="1018:1140" ph="{...}" />
+                <marker date="1556554393904" expanded="true" signature="1224:1304" ph="{...}" />
+                <marker date="1556554393904" expanded="true" signature="1378:1716" ph="{...}" />
+                <marker date="1556554393904" expanded="true" signature="1480:1634" ph="{...}" />
+                <marker date="1556554393904" expanded="true" signature="1539:1624" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -151,7 +145,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Code/GroundTileController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="248">
@@ -280,9 +274,9 @@
         <option value="$PROJECT_DIR$/Assets/Code/FoodManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/FarmerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/SelectedTileController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GroundTileManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UseItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GroundTileController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GroundTileManager.cs" />
       </list>
     </option>
   </component>
@@ -291,11 +285,10 @@
       <facet id="riderModule/invalid/Default Android Facet" />
     </ignored-facets>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="12" />
-    <option name="y" value="-18" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -354,12 +347,12 @@
       <workItem from="1556475965800" duration="1237000" />
       <workItem from="1556485326168" duration="263000" />
       <workItem from="1556492289173" duration="6486000" />
-      <workItem from="1556546461157" duration="5937000" />
+      <workItem from="1556546461157" duration="6633000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59436000" />
+    <option name="totallyTimeSpent" value="60132000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -371,7 +364,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
@@ -866,27 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Code/GroundTileManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <marker date="1556554153925" expanded="false" signature="6:97" ph="..." />
-            <marker date="1556554153925" expanded="true" signature="146:1591" ph="{...}" />
-            <marker date="1556554153925" expanded="true" signature="383:1047" ph="{...}" />
-            <marker date="1556554153925" expanded="true" signature="485:1041" ph="{...}" />
-            <marker date="1556554153925" expanded="true" signature="587:921" ph="{...}" />
-            <marker date="1556554153925" expanded="true" signature="670:773" ph="{...}" />
-            <marker date="1556554153925" expanded="true" signature="773:907" ph="{...}" />
-            <marker date="1556554153925" expanded="true" signature="921:1031" ph="{...}" />
-            <marker date="1556554153925" expanded="true" signature="1097:1177" ph="{...}" />
-            <marker date="1556554153925" expanded="true" signature="1251:1589" ph="{...}" />
-            <marker date="1556554153925" expanded="true" signature="1353:1507" ph="{...}" />
-            <marker date="1556554153925" expanded="true" signature="1412:1497" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Code/GroundTileController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -904,6 +876,28 @@
             <marker date="1556554296732" expanded="true" signature="1162:1322" ph="{...}" />
             <marker date="1556554296732" expanded="true" signature="1375:1480" ph="{...}" />
             <marker date="1556554296732" expanded="true" signature="1523:1616" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Code/GroundTileManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <marker date="1556554393904" expanded="false" signature="6:97" ph="..." />
+            <marker date="1556554393904" expanded="true" signature="146:1718" ph="{...}" />
+            <marker date="1556554393904" expanded="true" signature="383:1174" ph="{...}" />
+            <marker date="1556554393904" expanded="true" signature="485:1168" ph="{...}" />
+            <marker date="1556554393904" expanded="true" signature="620:1158" ph="{...}" />
+            <marker date="1556554393904" expanded="true" signature="691:1018" ph="{...}" />
+            <marker date="1556554393904" expanded="true" signature="743:854" ph="{...}" />
+            <marker date="1556554393904" expanded="true" signature="854:1000" ph="{...}" />
+            <marker date="1556554393904" expanded="true" signature="1018:1140" ph="{...}" />
+            <marker date="1556554393904" expanded="true" signature="1224:1304" ph="{...}" />
+            <marker date="1556554393904" expanded="true" signature="1378:1716" ph="{...}" />
+            <marker date="1556554393904" expanded="true" signature="1480:1634" ph="{...}" />
+            <marker date="1556554393904" expanded="true" signature="1539:1624" ph="{...}" />
           </folding>
         </state>
       </provider>

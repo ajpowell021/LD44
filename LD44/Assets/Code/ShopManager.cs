@@ -128,16 +128,16 @@ public class ShopManager : MonoBehaviour {
 
         switch (currentSelectedItem) {
             case 0:
-                selector.transform.localPosition = new Vector3(-9.5f, 225, 0);
+                selector.transform.localPosition = new Vector3(0, 66.14f, 0);
                 break;
             case 1:
-                selector.transform.localPosition = new Vector3(-9.5f, 81, 0);
+                selector.transform.localPosition = new Vector3(0, 20.3f, 0);
                 break;
             case 2:
-                selector.transform.localPosition = new Vector3(-9.5f, -64, 0);
+                selector.transform.localPosition = new Vector3(0, -31.8f, 0);
                 break;
             case 3:
-                selector.transform.localPosition = new Vector3(-9.5f, -216, 0);
+                selector.transform.localPosition = new Vector3(0, -69.5f, 0);
                 break;
         }
     }
