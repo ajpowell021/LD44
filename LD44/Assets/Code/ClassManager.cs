@@ -7,6 +7,7 @@ public class ClassManager : MonoBehaviour {
     public static ClassManager instance;
 
     public GameObject farmerObject;
+    public GameObject soundObject;
     
     // Classes
     public InputManager inputManager;
@@ -23,6 +24,7 @@ public class ClassManager : MonoBehaviour {
     public FoodManager foodManager;
     public ShopManager shopManager;
     public Animator farmerAnimator;
+    public SfxPlayer sfxPlayer;
     
     private void Awake() {
         setInstance();
@@ -53,5 +55,6 @@ public class ClassManager : MonoBehaviour {
         foodManager = gameObject.GetComponent<FoodManager>();
         shopManager = gameObject.GetComponent<ShopManager>();
         farmerAnimator = farmerObject.GetComponent<Animator>();
+        sfxPlayer = soundObject.GetComponent<SfxPlayer>();
     }
 }

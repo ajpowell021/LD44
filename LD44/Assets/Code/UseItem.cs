@@ -11,11 +11,13 @@ public class UseItem : MonoBehaviour {
     private AgeManager ageManager;
     private FoodManager foodManager;
     private ShopManager shopManager;
+    private SfxPlayer sfxPlayer;
 
     private void Start() {
         playerInventory = ClassManager.instance.playerInventory;
         groundTileManager = ClassManager.instance.groundTileManager;
         selectedTileController = ClassManager.instance.selectedTileController;
+        sfxPlayer = ClassManager.instance.sfxPlayer;
         plantManager = ClassManager.instance.plantManager;
         ageManager = ClassManager.instance.ageManager;
         foodManager = ClassManager.instance.foodManager;
@@ -45,6 +47,7 @@ public class UseItem : MonoBehaviour {
                 case ItemType.Hoe:
                     if (selectedTileController.selectedTilePosition != groundTileManager.cratePosition) {
                         controller.groundHitWithHoe();      
+                        sfxPlayer.playHitGround();
                     }  
                     break;
                 case ItemType.CarrotSeed:
