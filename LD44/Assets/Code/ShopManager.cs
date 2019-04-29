@@ -20,10 +20,10 @@ public class ShopManager : MonoBehaviour {
 
     public int seedPrice;
 
-    public TextMeshProUGUI textOne;
-    public TextMeshProUGUI textTwo;
-    public TextMeshProUGUI textThree;
-    public TextMeshProUGUI restockTime;
+    public Text textOne;
+    public Text textTwo;
+    public Text textThree;
+    public Text restockTime;
 
     public Image imageOne;
     public Image imageTwo;

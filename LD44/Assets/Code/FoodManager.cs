@@ -139,22 +139,22 @@ public class FoodManager : MonoBehaviour {
     private void setSelectedText() {
         switch (selectedRecipeIndex) {
             case 0:
-                uiSelector.transform.localPosition = new Vector3(2, 303, 0);
+                uiSelector.transform.localPosition = new Vector3(0, 82, 0);
                 break;
             case 1:
-                uiSelector.transform.localPosition = new Vector3(2, 171, 0);
+                uiSelector.transform.localPosition = new Vector3(0, 42, 0);
                 break;
             case 2:
-                uiSelector.transform.localPosition = new Vector3(2, 37, 0);
+                uiSelector.transform.localPosition = new Vector3(0, 7, 0);
                 break;
             case 3:
-                uiSelector.transform.localPosition = new Vector3(2, -95, 0);
+                uiSelector.transform.localPosition = new Vector3(0, -30, 0);
                 break;
             case 4:
-                uiSelector.transform.localPosition = new Vector3(2, -230, 0);
+                uiSelector.transform.localPosition = new Vector3(0, -62, 0);
                 break;
             case 5:
-                uiSelector.transform.localPosition = new Vector3(2, -354, 0);
+                uiSelector.transform.localPosition = new Vector3(0, -100, 0);
                 break;
             defualt:
                 Debug.Log("Error: Selector is out of range");

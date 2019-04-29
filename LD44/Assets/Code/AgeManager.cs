@@ -10,18 +10,18 @@ public class AgeManager : MonoBehaviour {
     public float currentAge;
     public GameObject ageTextObject;
     public GameObject gameOverPanel;
-    public TextMeshProUGUI scoreText;
+    public Text scoreText;
     public float score;
     public bool dead;
 
     private InputManager inputManager;
 
-    private TextMeshProUGUI ageText;
+    private Text ageText;
 
     private Animator farmerAnimator;
 
     private void Awake() {
-        ageText = ageTextObject.GetComponent<TextMeshProUGUI>();
+        ageText = ageTextObject.GetComponent<Text>();
     }
 
     private void Start() {
