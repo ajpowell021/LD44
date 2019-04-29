@@ -35,7 +35,7 @@ public class UseItem : MonoBehaviour {
             // Open shop menu.
             shopManager.toggleShopPanel();
         }
-        else { 
+        else if (selectedTileController.selectedTilePosition != groundTileManager.belowVendingMachinePosition) { 
             switch (item) {
                 case ItemType.WaterCan:
                     if (controller.currentGroundType == GroundType.Dirt) {

@@ -8,6 +8,7 @@ public class GroundTileController : MonoBehaviour {
     public Plant plant;
     private float currentTimeToGrass;
     private bool countToGrass;
+    public bool dontChange;
 
     private GroundTileManager groundTileManager;
     

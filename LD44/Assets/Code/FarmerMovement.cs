@@ -41,28 +41,28 @@ public class FarmerMovement : MonoBehaviour {
     }
 
     private bool canMoveUp(Vector3 direction) {
-        if (direction == Vector3.up && transform.position.y > 5) {
+        if (direction == Vector3.up && transform.position.y > 4) {
             return false;
         }
         return true;
     }
     
     private bool canMoveDown(Vector3 direction) {
-        if (direction == Vector3.down && transform.position.y < -4) {
+        if (direction == Vector3.down && transform.position.y < -2) {
             return false;
         }
         return true;
     }
     
     private bool canMoveLeft(Vector3 direction) {
-        if (direction == Vector3.left && transform.position.x < -10) {
+        if (direction == Vector3.left && transform.position.x < -7) {
             return false;
         }
         return true;
     }
     
     private bool canMoveRight(Vector3 direction) {
-        if (direction == Vector3.right && transform.position.x > 10) {
+        if (direction == Vector3.right && transform.position.x > 7) {
             return false;
         }
         return true;

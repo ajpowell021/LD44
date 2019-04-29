@@ -8,22 +8,26 @@ public class GroundTileManager : MonoBehaviour {
     public Vector3 cratePosition;
     public Vector3 ovenPosition;
     public Vector3 vendingMachinePosition;
+    public Vector3 belowVendingMachinePosition;
 
     public float returnToGrassTime;
 
     public void setAllGroundSprites() {
         List<GameObject> tiles = getAllGroundTiles();
         for (int i = 0; i < tiles.Count; i++) {
-            if (tiles[i].GetComponent<GroundTileController>().currentGroundType == GroundType.Dirt) {
-                if (tiles[i].GetComponent<GroundTileController>().plant.watered) {
-                    tiles[i].GetComponent<WateredTileChanger>().setWateredSprite();
+            GroundTileController controller = tiles[i].GetComponent<GroundTileController>();
+            if (!controller.dontChange) {
+                if (controller.currentGroundType == GroundType.Dirt) {
+                    if (controller.plant.watered) {
+                        tiles[i].GetComponent<WateredTileChanger>().setWateredSprite();
+                    }
+                    else {
+                        tiles[i].GetComponent<TilledGroundArtSetter>().detectAndSetSprite();    
+                    }
                 }
                 else {
-                    tiles[i].GetComponent<TilledGroundArtSetter>().detectAndSetSprite();    
-                }
-            }
-            else {
-                tiles[i].GetComponent<DirtArtSetter>().detectAndSetSprite();
+                    tiles[i].GetComponent<DirtArtSetter>().detectAndSetSprite();
+                }    
             }
         }
     }

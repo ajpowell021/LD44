@@ -27,18 +27,18 @@ public class SelectedTileController : MonoBehaviour {
         selectedTilePosition.x = Mathf.Round(selectedTilePosition.x);
         selectedTilePosition.y = Mathf.Round(selectedTilePosition.y);
 
-        if (selectedTilePosition.x > 10) {
-            selectedTilePosition.x = 10;
+        if (selectedTilePosition.x > 7) {
+            selectedTilePosition.x = 7;
         }
-        else if (selectedTilePosition.x < -10) {
-            selectedTilePosition.x = -10;
+        else if (selectedTilePosition.x < -7) {
+            selectedTilePosition.x = -7;
         }
 
-        if (selectedTilePosition.y > 5) {
-            selectedTilePosition.y = 5;
+        if (selectedTilePosition.y > 4) {
+            selectedTilePosition.y = 4;
         }
-        else if (selectedTilePosition.y < -4) {
-            selectedTilePosition.y = -4;
+        else if (selectedTilePosition.y < -2) {
+            selectedTilePosition.y = -2;
         }
         
         
