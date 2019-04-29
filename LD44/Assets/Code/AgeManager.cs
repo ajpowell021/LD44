@@ -18,12 +18,15 @@ public class AgeManager : MonoBehaviour {
 
     private TextMeshProUGUI ageText;
 
+    private Animator farmerAnimator;
+
     private void Awake() {
         ageText = ageTextObject.GetComponent<TextMeshProUGUI>();
     }
 
     private void Start() {
         inputManager = ClassManager.instance.inputManager;
+        farmerAnimator = ClassManager.instance.farmerAnimator;
     }
 
     private void Update() {
@@ -31,7 +34,8 @@ public class AgeManager : MonoBehaviour {
             currentAge += Time.deltaTime * ageRate;
             score += Time.deltaTime * ageRate;
             setAgeText();
-            checkDeath();    
+            checkDeath();
+            checkAgeAnimation();
         }
     }
 
@@ -43,6 +47,25 @@ public class AgeManager : MonoBehaviour {
         currentAge -= ageValue;
         if (currentAge < 0) {
             currentAge = 0;
+        }
+    }
+
+    private void checkAgeAnimation() {
+        if (currentAge <= 10) {
+            if (!farmerAnimator.GetBool("isBaby")) {
+                farmerAnimator.SetBool("isBaby", true);
+            }
+        }
+        else if (currentAge > 10 && currentAge < 70) {
+            if (!farmerAnimator.GetBool("isOld") || !farmerAnimator.GetBool("isBaby")) {
+                farmerAnimator.SetBool("isOld", false);
+                farmerAnimator.SetBool("isBaby", false);
+            }
+        }
+        else if (currentAge >= 70) {
+            if (!farmerAnimator.GetBool("isOld")) {
+                farmerAnimator.SetBool("isOld", true);
+            }
         }
     }
 

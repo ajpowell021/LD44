@@ -22,6 +22,7 @@ public class ClassManager : MonoBehaviour {
     public PlantManager plantManager;
     public FoodManager foodManager;
     public ShopManager shopManager;
+    public Animator farmerAnimator;
     
     private void Awake() {
         setInstance();
@@ -51,5 +52,6 @@ public class ClassManager : MonoBehaviour {
         plantManager = gameObject.GetComponent<PlantManager>();
         foodManager = gameObject.GetComponent<FoodManager>();
         shopManager = gameObject.GetComponent<ShopManager>();
+        farmerAnimator = farmerObject.GetComponent<Animator>();
     }
 }
