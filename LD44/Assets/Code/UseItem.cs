@@ -50,7 +50,7 @@ public class UseItem : MonoBehaviour {
                 case ItemType.CarrotSeed:
                 case ItemType.PotatoeSeed:
                 case ItemType.GarlicSeed:
-                case ItemType.Veg4Seed:
+                case ItemType.PepperSeed:
                 case ItemType.Veg5Seed:
                     if (controller.currentGroundType == GroundType.Dirt && !controller.plant.seedPresent) {
                         controller.plantSeed(item);
@@ -59,7 +59,7 @@ public class UseItem : MonoBehaviour {
                     break;
                 case ItemType.Carrot:
                 case ItemType.Potatoe:
-                case ItemType.Veg4:
+                case ItemType.Pepper:
                 case ItemType.Veg5:
                 case ItemType.Garlic:
                     if (selectedTileController.selectedTilePosition == groundTileManager.cratePosition) {

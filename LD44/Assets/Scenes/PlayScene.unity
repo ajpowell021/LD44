@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1796,7 +1796,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &132327712 stripped
 GameObject:
@@ -2277,7 +2277,7 @@ PrefabInstance:
     - target: {fileID: 4134225849012245597, guid: 51460c92e3e5f5f409b5ae1d16501a6e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4134225849012245597, guid: 51460c92e3e5f5f409b5ae1d16501a6e,
         type: 3}
@@ -7080,14 +7080,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noneSprite: {fileID: 21300000, guid: 01f55c7dd93264c42aa8de76f201c65a, type: 3}
   waterCanSprite: {fileID: 21300000, guid: d8a46e6b5c71d424a80cea4bfbb74f3f, type: 3}
-  cornSeedSprite: {fileID: 21300000, guid: 3f4e4fdb7f5cc2e45850642e619977a2, type: 3}
-  cornSprite: {fileID: 21300000, guid: b0f48df9e846d50468f5abf6375235ea, type: 3}
+  garlicSeedSprite: {fileID: 21300000, guid: a67c1ea9901307f47b321d99439aad5b, type: 3}
+  garlicSprite: {fileID: 21300000, guid: 5d91de56243b82649862d4f95763ab39, type: 3}
   carrotSeedSprite: {fileID: 21300000, guid: ee64ddaa76506ad48819de6e8758f3ea, type: 3}
   carrotSprite: {fileID: 21300000, guid: cf10c8dbb67c5db4590a9d73ba8152f3, type: 3}
   potatoSeedSprite: {fileID: 21300000, guid: a6d120779cf97754a92051b869971546, type: 3}
   potatoSprite: {fileID: 21300000, guid: d01dd04fbe9ce254e87158a2e7092bca, type: 3}
-  veg4SeedSprite: {fileID: 21300000, guid: 99425f4770e6de34e9945c65b897c367, type: 3}
-  veg4Sprite: {fileID: 21300000, guid: 99425f4770e6de34e9945c65b897c367, type: 3}
+  pepperSeedSprite: {fileID: 21300000, guid: 48de35c9d73155b4193908faffed0ef2, type: 3}
+  pepperSprite: {fileID: 21300000, guid: 369eb7eb8f857d040bef2d1d5cede8ff, type: 3}
   veg5SeedSprite: {fileID: 21300000, guid: bf6acf89f7cc4ed44be4c3cd5b46e985, type: 3}
   veg5Sprite: {fileID: 21300000, guid: bf6acf89f7cc4ed44be4c3cd5b46e985, type: 3}
   hoeSprite: {fileID: 21300000, guid: a5d591080a2fe894fa2de3ea548ed6e9, type: 3}
@@ -7115,9 +7115,9 @@ MonoBehaviour:
     type: 3}
   hoeObject: {fileID: 1149715429781116911, guid: 7a35190b15661c74e964ce4771548aa0,
     type: 3}
-  cornSeedObject: {fileID: 2463768379790939806, guid: 7580ebf621736bb4e9a6d954505723a7,
+  garlicSeedObject: {fileID: 7102073529444169894, guid: b4c69ef23b956a1438b2fe47305874a7,
     type: 3}
-  cornObject: {fileID: 4657315833006736956, guid: 0d586af588e40b74b8da3a7b630c52ed,
+  garlicObject: {fileID: 995142092123360199, guid: 0e702d6ca1f8c00419db7669a6f05a37,
     type: 3}
   carrotSeedObject: {fileID: 8769995121714341831, guid: 1052855a90f2eb44f8fadc53e4aeb810,
     type: 3}
@@ -7127,8 +7127,9 @@ MonoBehaviour:
     type: 3}
   potatoObject: {fileID: 648227868064326504, guid: 8e97fab8f1d011b408c70a66fa76e86f,
     type: 3}
-  veg4SeedObject: {fileID: 0}
-  veg4Object: {fileID: 30259207164744583, guid: 966dee75a4a854545ad450bba3cd72ec,
+  pepperSeedObject: {fileID: 132923590299730312, guid: 541957902cba0334789934c9141d029e,
+    type: 3}
+  pepperObject: {fileID: 8844664531112977954, guid: 5e8537e5d6166004ba83f21bf52c1985,
     type: 3}
   veg5SeedObject: {fileID: 0}
   veg5Object: {fileID: 219534105839672405, guid: 93401f87cb3ae884ba56607c0dad73fd,
@@ -7173,25 +7174,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d5e6b4ced32214f80ca8c2abe9ca4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cornOne: {fileID: 21300000, guid: 739d967714051cb45ab476e4362628df, type: 3}
-  cornTwo: {fileID: 21300000, guid: dd3492757a9147f488a6b5d126bec7b6, type: 3}
-  cornThree: {fileID: 21300000, guid: 3e6badedcfc8eab40966916ac72dd2e5, type: 3}
+  garlicOne: {fileID: 21300000, guid: 9a1c919c80ada3a46ad1cbe012b3d406, type: 3}
+  garlicTwo: {fileID: 21300000, guid: b9d4cae70c59bb34a92d0114b1d80b9b, type: 3}
+  garlicThree: {fileID: 21300000, guid: 051074dcbc6b1a84080ad25dfb5016f8, type: 3}
   carrotOne: {fileID: 21300000, guid: 88f47af598b3886418ab1fc1b8fa5c3e, type: 3}
   carrotTwo: {fileID: 21300000, guid: 406e041c1518ebd4fbe55922cba3e06a, type: 3}
   carrotThree: {fileID: 21300000, guid: 1eff6e8896c6a494aa2c43e514d21fe0, type: 3}
   potatoOne: {fileID: 21300000, guid: 06c271cb48d7edb4f8ad7770e22a2ab9, type: 3}
   potatoTwo: {fileID: 21300000, guid: 2eed04bb03816ac498617f97c1bef19c, type: 3}
   potatoThree: {fileID: 21300000, guid: 9303900dca67adb498beb421baa42dbf, type: 3}
-  veg4One: {fileID: 0}
-  veg4Two: {fileID: 0}
-  veg4Three: {fileID: 0}
+  pepperOne: {fileID: 21300000, guid: 9fd5fe75f4d5bd94db2ab6acffb12734, type: 3}
+  pepperTwo: {fileID: 21300000, guid: 61a2956c2e40d8147a42396e70380b41, type: 3}
+  pepperThree: {fileID: 21300000, guid: 547231126c3a4f64fbb99ecfa2d75c67, type: 3}
   veg5One: {fileID: 0}
   veg5Two: {fileID: 0}
   veg5Three: {fileID: 0}
-  cornGrowRate: 4
+  garlicGrowRate: 4
   carrotGrowRate: 4
   potatoGrowRate: 0
-  veg4GrowRate: 0
+  pepperGrowRate: 4
   veg5GrowRate: 0
   wateredMultiplier: 4
   wateredLastsTime: 5
@@ -7207,17 +7208,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a47f9da364164b47b756c6452092888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cornCount: 100
+  garlicCount: 0
   carrotCount: 100
   potatoesCount: 0
-  veg4Count: 0
+  pepperCount: 0
   veg5Count: 0
   cookTime: 5
   isCooking: 0
-  rawCornAge: 10
+  rawGarlicAge: 10
   rawCarrotAge: 10
   rawPotatoAge: 10
-  rawVeg4Age: 10
+  rawPepperAge: 10
   rawVeg5Age: 10
   recipeOneAge: 25
   recipeTwoAge: 40
@@ -8526,7 +8527,7 @@ RectTransform:
   - {fileID: 15623328}
   - {fileID: 1729469458}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -22373,7 +22374,7 @@ PrefabInstance:
     - target: {fileID: 2967937151097333335, guid: cb202385bc9c6f5439774f2a7d034d43,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2967937151097333335, guid: cb202385bc9c6f5439774f2a7d034d43,
         type: 3}
@@ -22397,6 +22398,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb202385bc9c6f5439774f2a7d034d43, type: 3}
+--- !u!1001 &4805237847899990043
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8844664531112977954, guid: 5e8537e5d6166004ba83f21bf52c1985,
+        type: 3}
+      propertyPath: m_Name
+      value: pepper
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258297863752689446, guid: 5e8537e5d6166004ba83f21bf52c1985,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.661602
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258297863752689446, guid: 5e8537e5d6166004ba83f21bf52c1985,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5804374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258297863752689446, guid: 5e8537e5d6166004ba83f21bf52c1985,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258297863752689446, guid: 5e8537e5d6166004ba83f21bf52c1985,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258297863752689446, guid: 5e8537e5d6166004ba83f21bf52c1985,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258297863752689446, guid: 5e8537e5d6166004ba83f21bf52c1985,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258297863752689446, guid: 5e8537e5d6166004ba83f21bf52c1985,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258297863752689446, guid: 5e8537e5d6166004ba83f21bf52c1985,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258297863752689446, guid: 5e8537e5d6166004ba83f21bf52c1985,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258297863752689446, guid: 5e8537e5d6166004ba83f21bf52c1985,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258297863752689446, guid: 5e8537e5d6166004ba83f21bf52c1985,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e8537e5d6166004ba83f21bf52c1985, type: 3}
 --- !u!1001 &5090666278923768961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22447,7 +22517,7 @@ PrefabInstance:
     - target: {fileID: 5151918067838542563, guid: e500c25e9fd6d2648b6a8405c99945a4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5151918067838542563, guid: e500c25e9fd6d2648b6a8405c99945a4,
         type: 3}
@@ -22466,6 +22536,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e500c25e9fd6d2648b6a8405c99945a4, type: 3}
+--- !u!1001 &5747404690230402839
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 132923590299730312, guid: 541957902cba0334789934c9141d029e,
+        type: 3}
+      propertyPath: m_Name
+      value: PepperSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221087974962669917, guid: 541957902cba0334789934c9141d029e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.9324324
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221087974962669917, guid: 541957902cba0334789934c9141d029e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7574661
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221087974962669917, guid: 541957902cba0334789934c9141d029e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221087974962669917, guid: 541957902cba0334789934c9141d029e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221087974962669917, guid: 541957902cba0334789934c9141d029e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221087974962669917, guid: 541957902cba0334789934c9141d029e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221087974962669917, guid: 541957902cba0334789934c9141d029e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221087974962669917, guid: 541957902cba0334789934c9141d029e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221087974962669917, guid: 541957902cba0334789934c9141d029e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221087974962669917, guid: 541957902cba0334789934c9141d029e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221087974962669917, guid: 541957902cba0334789934c9141d029e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 541957902cba0334789934c9141d029e, type: 3}
 --- !u!1001 &8027961770416742545
 PrefabInstance:
   m_ObjectHideFlags: 0

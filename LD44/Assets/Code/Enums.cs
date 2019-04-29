@@ -25,10 +25,10 @@ public enum ItemType {
     RecipeFive,
     RecipeSix,
     Potatoe,
-    Veg4,
+    Pepper,
     Veg5,
     PotatoeSeed,
-    Veg4Seed,
+    PepperSeed,
     Veg5Seed
 }
 
@@ -41,6 +41,6 @@ public enum PlantType {
     Garlic,
     Carrot,
     Potato,
-    Veg4,
+    Pepper,
     Veg5
 }

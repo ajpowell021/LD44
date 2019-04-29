@@ -16,9 +16,9 @@ public class PlantManager : MonoBehaviour {
     public Sprite potatoTwo;
     public Sprite potatoThree;
 
-    public Sprite veg4One;
-    public Sprite veg4Two;
-    public Sprite veg4Three;
+    public Sprite pepperOne;
+    public Sprite pepperTwo;
+    public Sprite pepperThree;
     
     public Sprite veg5One;
     public Sprite veg5Two;
@@ -27,7 +27,7 @@ public class PlantManager : MonoBehaviour {
     public float garlicGrowRate;
     public float carrotGrowRate;
     public float potatoGrowRate;
-    public float veg4GrowRate;
+    public float pepperGrowRate;
     public float veg5GrowRate;
 
     public float wateredMultiplier;
@@ -39,6 +39,10 @@ public class PlantManager : MonoBehaviour {
                 return PlantType.Garlic;
             case ItemType.CarrotSeed:
                 return PlantType.Carrot;
+            case ItemType.PotatoeSeed:
+                return PlantType.Potato;
+            case ItemType.PepperSeed:
+                return PlantType.Pepper;
             default:
                 Debug.Log("Invalid item type.  Probably not a plant");
                 return PlantType.Garlic;
@@ -74,14 +78,14 @@ public class PlantManager : MonoBehaviour {
                     default:
                         return potatoThree;
                 }
-            case PlantType.Veg4:
+            case PlantType.Pepper:
                 switch (level) {
                     case 1:
-                        return veg4One;
+                        return pepperOne;
                     case 2:
-                        return veg4Two;
+                        return pepperTwo;
                     default:
-                        return veg4Three;
+                        return pepperThree;
                 }
             case PlantType.Veg5:
                 switch (level) {
@@ -106,8 +110,8 @@ public class PlantManager : MonoBehaviour {
                 return carrotGrowRate;
             case PlantType.Potato:
                 return potatoGrowRate;
-            case PlantType.Veg4:
-                return veg4GrowRate;
+            case PlantType.Pepper:
+                return pepperGrowRate;
             case PlantType.Veg5:
                 return veg5GrowRate;
             default:
@@ -124,8 +128,8 @@ public class PlantManager : MonoBehaviour {
                 return ItemType.Carrot;
             case PlantType.Potato:
                 return ItemType.Potatoe;
-            case PlantType.Veg4:
-                return ItemType.Veg4;
+            case PlantType.Pepper:
+                return ItemType.Pepper;
             case PlantType.Veg5:
                 return ItemType.Veg5;
             default:

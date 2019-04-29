@@ -9,7 +9,7 @@ public class FoodManager : MonoBehaviour {
     public int garlicCount;
     public int carrotCount;
     public int potatoesCount;
-    public int veg4Count;
+    public int pepperCount;
     public int veg5Count;
 
     public float cookTime;
@@ -19,7 +19,7 @@ public class FoodManager : MonoBehaviour {
     public int rawGarlicAge;
     public int rawCarrotAge;
     public int rawPotatoAge;
-    public int rawVeg4Age;
+    public int rawPepperAge;
     public int rawVeg5Age;
     public int recipeOneAge;
     public int recipeTwoAge;
@@ -53,8 +53,8 @@ public class FoodManager : MonoBehaviour {
                 return rawCarrotAge;
             case ItemType.Potatoe:
                 return rawPotatoAge;
-            case ItemType.Veg4:
-                return rawVeg4Age;
+            case ItemType.Pepper:
+                return rawPepperAge;
             case ItemType.Veg5:
                 return rawVeg5Age;
             case ItemType.RecipeOne:
@@ -86,8 +86,8 @@ public class FoodManager : MonoBehaviour {
             case ItemType.Potatoe:
                 potatoesCount++;
                 break;
-            case ItemType.Veg4:
-                veg4Count++;
+            case ItemType.Pepper:
+                pepperCount++;
                 break;
             case ItemType.Veg5:
                 veg5Count++;
@@ -155,15 +155,15 @@ public class FoodManager : MonoBehaviour {
                 }
                 return false;
             case 2:
-                if (carrotCount > 1 && veg4Count > 1) {
+                if (carrotCount > 1 && pepperCount > 1) {
                     carrotCount--;
-                    veg4Count--;
+                    pepperCount--;
                     return true;
                 }
                 return false;
             case 3:
-                if (veg4Count > 1 && veg5Count > 1) {
-                    veg4Count--;
+                if (pepperCount > 1 && veg5Count > 1) {
+                    pepperCount--;
                     veg5Count--;
                     return true;
                 }
@@ -184,11 +184,11 @@ public class FoodManager : MonoBehaviour {
                 }
                 return false;
             case 6:
-                if (potatoesCount > 0 && carrotCount > 0 && garlicCount > 0 && veg4Count > 0 && veg5Count > 0) {
+                if (potatoesCount > 0 && carrotCount > 0 && garlicCount > 0 && pepperCount > 0 && veg5Count > 0) {
                     potatoesCount--;
                     carrotCount--;
                     garlicCount--;
-                    veg4Count--;
+                    pepperCount--;
                     veg5Count--;
                     return true;
                 }
