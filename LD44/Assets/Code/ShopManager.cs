@@ -108,8 +108,8 @@ public class ShopManager : MonoBehaviour {
                 return "Seeds to plant potatoes. Costs " + seedPrice + " years to buy";
             case ItemType.PepperSeed:
                 return "Seeds to plant peppers. Costs " + seedPrice + " years to buy";
-            case ItemType.Veg5Seed:
-                return "Seeds to plant Veg5. Costs " + seedPrice + " years to buy";
+            case ItemType.ChickpeaSeed:
+                return "Seeds to plant chickpea. Costs " + seedPrice + " years to buy";
         }
     
         Debug.Log("No description for item");
@@ -165,7 +165,7 @@ public class ShopManager : MonoBehaviour {
             case ItemType.CarrotSeed:
             case ItemType.PotatoeSeed:
             case ItemType.PepperSeed:
-            case ItemType.Veg5Seed:
+            case ItemType.ChickpeaSeed:
                 ageManager.eatFood(-seedPrice);
                 Instantiate(prefabManager.getObjectByItemType(itemType), new Vector3(9, 5, 0), Quaternion.identity);
                 break;

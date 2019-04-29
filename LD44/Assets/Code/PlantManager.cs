@@ -20,15 +20,15 @@ public class PlantManager : MonoBehaviour {
     public Sprite pepperTwo;
     public Sprite pepperThree;
     
-    public Sprite veg5One;
-    public Sprite veg5Two;
-    public Sprite veg5Three;
+    public Sprite chickpeaOne;
+    public Sprite chickpeaTwo;
+    public Sprite chickpeaThree;
 
     public float garlicGrowRate;
     public float carrotGrowRate;
     public float potatoGrowRate;
     public float pepperGrowRate;
-    public float veg5GrowRate;
+    public float chickpeaGrowRate;
 
     public float wateredMultiplier;
     public float wateredLastsTime;
@@ -43,6 +43,8 @@ public class PlantManager : MonoBehaviour {
                 return PlantType.Potato;
             case ItemType.PepperSeed:
                 return PlantType.Pepper;
+            case ItemType.ChickpeaSeed:
+                return PlantType.ChickPea;
             default:
                 Debug.Log("Invalid item type.  Probably not a plant");
                 return PlantType.Garlic;
@@ -87,14 +89,14 @@ public class PlantManager : MonoBehaviour {
                     default:
                         return pepperThree;
                 }
-            case PlantType.Veg5:
+            case PlantType.ChickPea:
                 switch (level) {
                     case 1:
-                        return veg5One;
+                        return chickpeaOne;
                     case 2:
-                        return veg5Two;
+                        return chickpeaTwo;
                     default:
-                        return veg5Three;
+                        return chickpeaThree;
                 }
             default:
                 Debug.Log("No sprite present!");
@@ -112,8 +114,8 @@ public class PlantManager : MonoBehaviour {
                 return potatoGrowRate;
             case PlantType.Pepper:
                 return pepperGrowRate;
-            case PlantType.Veg5:
-                return veg5GrowRate;
+            case PlantType.ChickPea:
+                return chickpeaGrowRate;
             default:
                 Debug.Log("No grow rate for that plant type");
                 return 0;
@@ -130,8 +132,8 @@ public class PlantManager : MonoBehaviour {
                 return ItemType.Potatoe;
             case PlantType.Pepper:
                 return ItemType.Pepper;
-            case PlantType.Veg5:
-                return ItemType.Veg5;
+            case PlantType.ChickPea:
+                return ItemType.Chickpea;
             default:
                 Debug.Log("Error: No matching item type for plant type");
                 return ItemType.Garlic;

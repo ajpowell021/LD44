@@ -51,7 +51,7 @@ public class UseItem : MonoBehaviour {
                 case ItemType.PotatoeSeed:
                 case ItemType.GarlicSeed:
                 case ItemType.PepperSeed:
-                case ItemType.Veg5Seed:
+                case ItemType.ChickpeaSeed:
                     if (controller.currentGroundType == GroundType.Dirt && !controller.plant.seedPresent) {
                         controller.plantSeed(item);
                         playerInventory.deleteInventoryItem();
@@ -60,7 +60,7 @@ public class UseItem : MonoBehaviour {
                 case ItemType.Carrot:
                 case ItemType.Potatoe:
                 case ItemType.Pepper:
-                case ItemType.Veg5:
+                case ItemType.Chickpea:
                 case ItemType.Garlic:
                     if (selectedTileController.selectedTilePosition == groundTileManager.cratePosition) {
                         // store it

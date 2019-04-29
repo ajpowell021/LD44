@@ -20,8 +20,8 @@ public class PrefabManager : MonoBehaviour {
     public GameObject pepperSeedObject;
     public GameObject pepperObject;
 
-    public GameObject veg5SeedObject;
-    public GameObject veg5Object;
+    public GameObject chickpeaSeedObject;
+    public GameObject chickpeaObject;
 
     public GameObject recipeOneObject;
     public GameObject recipeTwoObject;
@@ -60,10 +60,10 @@ public class PrefabManager : MonoBehaviour {
                 return pepperSeedObject;
             case ItemType.Pepper:
                 return pepperObject;
-            case ItemType.Veg5Seed:
-                return veg5SeedObject;
-            case ItemType.Veg5:
-                return veg5Object;
+            case ItemType.ChickpeaSeed:
+                return chickpeaSeedObject;
+            case ItemType.Chickpea:
+                return chickpeaObject;
             case ItemType.RecipeOne:
                 return recipeOneObject;
             case ItemType.RecipeTwo:

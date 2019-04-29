@@ -10,7 +10,7 @@ public class FoodManager : MonoBehaviour {
     public int carrotCount;
     public int potatoesCount;
     public int pepperCount;
-    public int veg5Count;
+    public int chickpeaCount;
 
     public float cookTime;
 
@@ -20,7 +20,7 @@ public class FoodManager : MonoBehaviour {
     public int rawCarrotAge;
     public int rawPotatoAge;
     public int rawPepperAge;
-    public int rawVeg5Age;
+    public int rawChickpeaAge;
     public int recipeOneAge;
     public int recipeTwoAge;
     public int recipeThreeAge;
@@ -55,8 +55,8 @@ public class FoodManager : MonoBehaviour {
                 return rawPotatoAge;
             case ItemType.Pepper:
                 return rawPepperAge;
-            case ItemType.Veg5:
-                return rawVeg5Age;
+            case ItemType.Chickpea:
+                return rawChickpeaAge;
             case ItemType.RecipeOne:
                 return recipeOneAge;
             case ItemType.RecipeTwo:
@@ -89,8 +89,8 @@ public class FoodManager : MonoBehaviour {
             case ItemType.Pepper:
                 pepperCount++;
                 break;
-            case ItemType.Veg5:
-                veg5Count++;
+            case ItemType.Chickpea:
+                chickpeaCount++;
                 break;
             default:
                 Debug.Log("No food count matching item type");
@@ -162,34 +162,34 @@ public class FoodManager : MonoBehaviour {
                 }
                 return false;
             case 3:
-                if (pepperCount > 1 && veg5Count > 1) {
+                if (pepperCount > 1 && chickpeaCount > 1) {
                     pepperCount--;
-                    veg5Count--;
+                    chickpeaCount--;
                     return true;
                 }
                 return false;
             case 4:
-                if (potatoesCount > 1 && veg5Count > 1) {
+                if (potatoesCount > 1 && chickpeaCount > 1) {
                     potatoesCount--;
-                    veg5Count--;
+                    chickpeaCount--;
                     return true;
                 }
                 return false;
             case 5: 
-                if (potatoesCount > 1 && carrotCount > 1 && veg5Count > 1) {
+                if (potatoesCount > 1 && carrotCount > 1 && chickpeaCount > 1) {
                     potatoesCount--;
                     carrotCount--;
-                    veg5Count--;
+                    chickpeaCount--;
                     return true;
                 }
                 return false;
             case 6:
-                if (potatoesCount > 0 && carrotCount > 0 && garlicCount > 0 && pepperCount > 0 && veg5Count > 0) {
+                if (potatoesCount > 0 && carrotCount > 0 && garlicCount > 0 && pepperCount > 0 && chickpeaCount > 0) {
                     potatoesCount--;
                     carrotCount--;
                     garlicCount--;
                     pepperCount--;
-                    veg5Count--;
+                    chickpeaCount--;
                     return true;
                 }
                 return false;
