@@ -26,17 +26,22 @@ public class FoodManager : MonoBehaviour {
     public int recipeThreeAge;
     public int recipeFourAge;
     public int recipeFiveAge;
+
+    public GameObject uiSelector;
+
+    public GameObject recipeOneObject;
+    public GameObject recipeTwoObject;
+    public GameObject recipeThreeObject;
+    public GameObject recipeFourObject;
+    public GameObject recipeFiveObject;
+    public GameObject exitObject;
     
     public GameObject recipePanel;
 
     private InputManager inputManager;
     private PrefabManager prefabManager;
     private GroundTileManager groundTileManager;
-
-    public Color32 selectedColor;
-    public Color32 unselectedColor;
     public int selectedRecipeIndex;
-    public List<GameObject> recipeTextObjects = new List<GameObject>();
 
     private void Start() {
         inputManager = ClassManager.instance.inputManager;
@@ -109,18 +114,18 @@ public class FoodManager : MonoBehaviour {
 
     public void adjustSelectedRecipeIndex(int adjust) {
         selectedRecipeIndex += adjust;
-        if (selectedRecipeIndex == 7) {
+        if (selectedRecipeIndex == 6) {
             selectedRecipeIndex = 0;
         }
         else if (selectedRecipeIndex == -1) {
-            selectedRecipeIndex = 6;
+            selectedRecipeIndex = 5;
         }
         
         setSelectedText();
     }
 
     public void executeSelectedAction() {
-        if (selectedRecipeIndex == 6) {
+        if (selectedRecipeIndex == 5) {
             toggleRecipePanel();
         }
         else {
@@ -132,61 +137,69 @@ public class FoodManager : MonoBehaviour {
     }
 
     private void setSelectedText() {
-        for (int i = 0; i < recipeTextObjects.Count; i++) {
-            if (i == selectedRecipeIndex) {
-                recipeTextObjects[i].GetComponent<TextMeshProUGUI>().color = selectedColor;
-            }
-            else {
-                recipeTextObjects[i].GetComponent<TextMeshProUGUI>().color = unselectedColor;
-            }
+        switch (selectedRecipeIndex) {
+            case 0:
+                uiSelector.transform.localPosition = new Vector3(2, 303, 0);
+                break;
+            case 1:
+                uiSelector.transform.localPosition = new Vector3(2, 171, 0);
+                break;
+            case 2:
+                uiSelector.transform.localPosition = new Vector3(2, 37, 0);
+                break;
+            case 3:
+                uiSelector.transform.localPosition = new Vector3(2, -95, 0);
+                break;
+            case 4:
+                uiSelector.transform.localPosition = new Vector3(2, -230, 0);
+                break;
+            case 5:
+                uiSelector.transform.localPosition = new Vector3(2, -354, 0);
+                break;
+            defualt:
+                Debug.Log("Error: Selector is out of range");
+                break;
         }
     }
 
     private bool canCookByRecipeNumber(int recipeNumber) {
         switch (recipeNumber) {
             case 1:
-                if (carrotCount > 0 && garlicCount > 0) {
-                    carrotCount--;
+                if (potatoesCount > 0 && garlicCount > 0) {
+                    potatoesCount--;
                     garlicCount--;
                     return true;
                 }
                 return false;
             case 2:
-                if (carrotCount > 1 && pepperCount > 1) {
+                if (carrotCount > 0 && chickpeaCount > 0) {
                     carrotCount--;
-                    pepperCount--;
+                    chickpeaCount--;
                     return true;
                 }
                 return false;
             case 3:
-                if (pepperCount > 1 && chickpeaCount > 1) {
+                if (pepperCount > 0 && potatoesCount > 0) {
                     pepperCount--;
-                    chickpeaCount--;
+                    potatoesCount--;
                     return true;
                 }
                 return false;
             case 4:
-                if (potatoesCount > 1 && chickpeaCount > 1) {
-                    potatoesCount--;
+                if (pepperCount > 0 && chickpeaCount > 0 && garlicCount > 0) {
+                    pepperCount--;
                     chickpeaCount--;
+                    garlicCount--;
                     return true;
                 }
                 return false;
             case 5: 
-                if (potatoesCount > 1 && carrotCount > 1 && chickpeaCount > 1) {
+                if (potatoesCount > 0 && carrotCount > 0 && chickpeaCount > 0 && garlicCount > 0 && pepperCount > 0) {
                     potatoesCount--;
                     carrotCount--;
                     chickpeaCount--;
-                    return true;
-                }
-                return false;
-            case 6:
-                if (potatoesCount > 0 && carrotCount > 0 && garlicCount > 0 && pepperCount > 0 && chickpeaCount > 0) {
-                    potatoesCount--;
-                    carrotCount--;
                     garlicCount--;
                     pepperCount--;
-                    chickpeaCount--;
                     return true;
                 }
                 return false;
