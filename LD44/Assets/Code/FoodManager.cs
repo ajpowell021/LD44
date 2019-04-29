@@ -47,12 +47,14 @@ public class FoodManager : MonoBehaviour {
     private InputManager inputManager;
     private PrefabManager prefabManager;
     private GroundTileManager groundTileManager;
+    private SfxPlayer sfxPlayer;
     public int selectedRecipeIndex;
 
     private void Start() {
         inputManager = ClassManager.instance.inputManager;
         prefabManager = ClassManager.instance.prefabManager;
         groundTileManager = ClassManager.instance.groundTileManager;
+        sfxPlayer = ClassManager.instance.sfxPlayer;
         updateUiFoodCounts();
     }
 
@@ -241,13 +243,15 @@ public class FoodManager : MonoBehaviour {
     }
 
     private void startCookingByRecipeNumber(int recipeNumber) {
+        sfxPlayer.playPurchaseSound();
         isCooking = true;
         StartCoroutine(startCooking(getItemTypeFromRecipeNumber(recipeNumber)));
     }
 
     private IEnumerator startCooking(ItemType itemType) {
         yield return new WaitForSeconds(cookTime);
-        Instantiate(prefabManager.getObjectByItemType(itemType), groundTileManager.ovenPosition + Vector3.down, Quaternion.identity);
+        sfxPlayer.playPurchaseSound();
+        Instantiate(prefabManager.getObjectByItemType(itemType), new Vector3(-5, 4, 0), Quaternion.identity);
         isCooking = false;
     }
 

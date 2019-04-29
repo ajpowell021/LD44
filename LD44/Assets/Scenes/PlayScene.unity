@@ -1875,7 +1875,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Garlicky Potatoes: 1 Garlic, 1 Potato
 
-    25 years younger'
+    40 years younger'
 --- !u!222 &222037772
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2870,7 +2870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ageRate: 0.5
-  currentAge: 15
+  currentAge: 10
   ageTextObject: {fileID: 1957428744}
   gameOverPanel: {fileID: 15623327}
   scoreText: {fileID: 845939831}
@@ -3027,7 +3027,7 @@ MonoBehaviour:
   ovenPosition: {x: -7, y: 4, z: 0}
   vendingMachinePosition: {x: 7, y: 4, z: 0}
   belowVendingMachinePosition: {x: 7, y: 3, z: 0}
-  returnToGrassTime: 15
+  returnToGrassTime: 20
 --- !u!114 &490421321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3084,18 +3084,18 @@ MonoBehaviour:
   carrotText: {fileID: 1870082158}
   chickpeaText: {fileID: 1744583641}
   potatoText: {fileID: 169197983}
-  cookTime: 5
+  cookTime: 2
   isCooking: 0
-  rawGarlicAge: 10
-  rawCarrotAge: 10
-  rawPotatoAge: 10
-  rawPepperAge: 10
-  rawChickpeaAge: 10
-  recipeOneAge: 25
+  rawGarlicAge: 15
+  rawCarrotAge: 15
+  rawPotatoAge: 15
+  rawPepperAge: 15
+  rawChickpeaAge: 15
+  recipeOneAge: 40
   recipeTwoAge: 40
   recipeThreeAge: 40
-  recipeFourAge: 60
-  recipeFiveAge: 60
+  recipeFourAge: 75
+  recipeFiveAge: 100
   uiSelector: {fileID: 1467938587}
   recipeOneObject: {fileID: 222037769}
   recipeTwoObject: {fileID: 494687896}
@@ -3121,11 +3121,11 @@ MonoBehaviour:
   selector: {fileID: 1697168835}
   currentSelectedItem: 0
   currentTimeToRestock: 0
-  maxRestockTime: 30
+  maxRestockTime: 15
   itemOne: 0
   itemTwo: 0
   itemThree: 0
-  seedPrice: 10
+  seedPrice: 5
   textOne: {fileID: 55391009}
   textTwo: {fileID: 1194953978}
   textThree: {fileID: 148093423}
@@ -3206,7 +3206,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Veggie Salad: 1 Carrot, 1 Chickpea
 
-    25 years younger'
+    40 years younger'
 --- !u!222 &494687899
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3287,7 +3287,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Spicy Potatoes: 1 Pepper, 1 Potato
 
-    25 years younger'
+    40 years younger'
 --- !u!222 &495446860
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10022,7 +10022,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Veggie Medley: 1 Pepper, 1 Garlic, 1 Chickpeas
 
-    50 years younger'
+    75 years younger'
 --- !u!222 &1889422170
 CanvasRenderer:
   m_ObjectHideFlags: 0
