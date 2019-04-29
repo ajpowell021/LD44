@@ -174,4 +174,8 @@ public class ShopManager : MonoBehaviour {
                 break;
         }
     }
+
+    public void gameOverHide() {
+        shopPanel.SetActive(false);
+    }
 }

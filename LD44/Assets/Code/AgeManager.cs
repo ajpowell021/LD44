@@ -15,7 +15,11 @@ public class AgeManager : MonoBehaviour {
     public bool dead;
 
     private InputManager inputManager;
+    private ShopManager shopManager;
+    private FoodManager foodManager;
 
+    public GameObject storageUiHolder;
+    
     private Text ageText;
 
     private Animator farmerAnimator;
@@ -27,6 +31,8 @@ public class AgeManager : MonoBehaviour {
     private void Start() {
         inputManager = ClassManager.instance.inputManager;
         farmerAnimator = ClassManager.instance.farmerAnimator;
+        foodManager = ClassManager.instance.foodManager;
+        shopManager = ClassManager.instance.shopManager;
     }
 
     private void Update() {
@@ -74,6 +80,9 @@ public class AgeManager : MonoBehaviour {
             dead = true;
             gameOverPanel.SetActive(true);
             inputManager.currentInputMode = InputMode.GameOver;
+            shopManager.gameOverHide();
+            foodManager.gameOverHide();
+            storageUiHolder.SetActive(false);
             scoreText.text = "You did manager to live a total of " + Mathf.FloorToInt(score) + " years though, so that's pretty good.";
         }
     }

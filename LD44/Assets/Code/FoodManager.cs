@@ -258,4 +258,8 @@ public class FoodManager : MonoBehaviour {
         pepperText.text = "Peppers: " + pepperCount;
         potatoText.text = "Potatoes: " + potatoesCount;
     }
+
+    public void gameOverHide() {
+        recipePanel.SetActive(false);
+    }
 }
