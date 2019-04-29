@@ -53,6 +53,11 @@ public class InputManager : MonoBehaviour {
          if (Input.GetKeyDown(KeyCode.Z)) {
             playerInventory.dropInventoryItem();
          }
+
+         if (!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)
+             && !Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow)) {
+            farmerMovement.stopDustMaker();
+         }
       }
       else if (currentInputMode == InputMode.RecipeMenu) {
          if (Input.GetKeyDown(KeyCode.Escape)) {
