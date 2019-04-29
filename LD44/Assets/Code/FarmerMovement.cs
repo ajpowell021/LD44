@@ -7,12 +7,21 @@ public class FarmerMovement : MonoBehaviour {
     public float moveSpeed;
     public Vector3 currentFacingDirection;
 
+    private SpriteRenderer spriteRenderer;
+
     private void Awake() {
         currentFacingDirection = Vector3.down;
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     public void move(Vector3 direction) {
         if (canMoveUp(direction) && canMoveDown(direction) && canMoveLeft(direction) && canMoveRight(direction)) {
+            if (direction == Vector3.right) {
+                spriteRenderer.flipX = false;
+            }
+            else if (direction == Vector3.left) {
+                spriteRenderer.flipX = true;
+            }
             transform.Translate(direction * moveSpeed * Time.deltaTime);
             currentFacingDirection = direction;
         }
