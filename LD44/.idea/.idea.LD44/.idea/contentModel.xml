@@ -28,6 +28,7 @@
           <e p="ShopManager.cs" t="Include" />
           <e p="SpriteManager.cs" t="Include" />
           <e p="TilledGroundArtSetter.cs" t="Include" />
+          <e p="TipTextRotater.cs" t="Include" />
           <e p="UseItem.cs" t="Include" />
           <e p="WateredTileChanger.cs" t="Include" />
         </e>

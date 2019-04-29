@@ -50,7 +50,7 @@ public class InputManager : MonoBehaviour {
             useItem.useEquippedItem();
          }
 
-         if (Input.GetKeyDown(KeyCode.Z)) {
+         if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.LeftControl)) {
             playerInventory.dropInventoryItem();
          }
 
