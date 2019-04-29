@@ -75,6 +75,7 @@ public class UseItem : MonoBehaviour {
                         // eat it
                         playerInventory.deleteInventoryItem();
                         ageManager.eatFood(foodManager.getAgeFromItemType(item));
+                        sfxPlayer.playEatFoodSound();
                     }
                     break;
                 case ItemType.RecipeOne:
@@ -84,6 +85,7 @@ public class UseItem : MonoBehaviour {
                 case ItemType.RecipeFive:
                     playerInventory.deleteInventoryItem();
                     ageManager.eatFood(foodManager.getAgeFromItemType(item));
+                    sfxPlayer.playEatFoodSound();
                     break;
                 case ItemType.None:
                     if (controller.plant.canBePicked) {

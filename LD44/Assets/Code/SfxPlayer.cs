@@ -39,4 +39,8 @@ public class SfxPlayer : MonoBehaviour {
         playSound();
     }
 
+    public void playEatFoodSound() {
+        audioSource.clip = clips[4];
+        playSound();
+    }
 }
