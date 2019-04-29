@@ -9,6 +9,8 @@ public class GroundTileManager : MonoBehaviour {
     public Vector3 ovenPosition;
     public Vector3 vendingMachinePosition;
 
+    public float returnToGrassTime;
+
     public void setAllGroundSprites() {
         List<GameObject> tiles = getAllGroundTiles();
         for (int i = 0; i < tiles.Count; i++) {

@@ -4,21 +4,31 @@ using UnityEngine;
 
 public class GroundTileController : MonoBehaviour {
 
-    public Sprite grassSprite;
-    public Sprite dirtSprite;
     public GroundType currentGroundType;
     public Plant plant;
+    private float currentTimeToGrass;
+    private bool countToGrass;
 
-    private SpriteRenderer spriteRenderer;
     private GroundTileManager groundTileManager;
     
     private void Awake() {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         plant = gameObject.GetComponent<Plant>();
     }
 
     private void Start() {
         groundTileManager = ClassManager.instance.groundTileManager;
+    }
+
+    private void Update() {
+        if (countToGrass) {
+            currentTimeToGrass += Time.deltaTime;
+            if (currentTimeToGrass > groundTileManager.returnToGrassTime) {
+                currentGroundType = GroundType.Grass;
+                groundTileManager.setAllGroundSprites();
+                currentTimeToGrass = 0;
+                countToGrass = false;
+            }
+        }
     }
 
     public void groundHitWithHoe() {
@@ -29,19 +39,21 @@ public class GroundTileController : MonoBehaviour {
         else {
             currentGroundType = GroundType.Dirt;
             groundTileManager.setAllGroundSprites();
+            countToGrass = true;
         }
     }
 
     public void plantSeed(ItemType seedType) {
         plant.plantPlant(seedType);
+        countToGrass = false;
+        currentTimeToGrass = 0;
     }
 
-    private void setSprite() {
-        if (currentGroundType == GroundType.Dirt) {
-            spriteRenderer.sprite = dirtSprite;
-        }
-        else {
-            spriteRenderer.sprite = grassSprite;
-        }
+    public void startCountToGrassTimer() {
+        // Pick a plant.
+        countToGrass = true;
+        currentTimeToGrass = 0;
     }
+    
+    
 }

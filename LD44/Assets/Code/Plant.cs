@@ -18,9 +18,11 @@ public class Plant : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
     private PlantManager plantManager;
     private GroundTileManager groundTileManager;
+    private GroundTileController groundTileController;
 
     private void Awake() {
         spriteRenderer = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        groundTileController = gameObject.GetComponent<GroundTileController>();
     }
 
     private void Start() {
@@ -59,6 +61,7 @@ public class Plant : MonoBehaviour {
         canBePicked = false;
         seedPresent = false;
         currentGrowPercentage = 0;
+        groundTileController.startCountToGrassTimer();
     }
 
     private void growPlant() {
