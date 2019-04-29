@@ -12,6 +12,12 @@ public class FoodManager : MonoBehaviour {
     public int pepperCount;
     public int chickpeaCount;
 
+    public Text garlicText;
+    public Text pepperText;
+    public Text carrotText;
+    public Text chickpeaText;
+    public Text potatoText;
+
     public float cookTime;
 
     public bool isCooking;
@@ -47,6 +53,7 @@ public class FoodManager : MonoBehaviour {
         inputManager = ClassManager.instance.inputManager;
         prefabManager = ClassManager.instance.prefabManager;
         groundTileManager = ClassManager.instance.groundTileManager;
+        updateUiFoodCounts();
     }
 
     public int getAgeFromItemType(ItemType itemType) {
@@ -98,6 +105,7 @@ public class FoodManager : MonoBehaviour {
                 Debug.Log("No food count matching item type");
                 break;
         }
+        updateUiFoodCounts();
     }
 
     public void toggleRecipePanel() {
@@ -168,6 +176,7 @@ public class FoodManager : MonoBehaviour {
                 if (potatoesCount > 0 && garlicCount > 0) {
                     potatoesCount--;
                     garlicCount--;
+                    updateUiFoodCounts();
                     return true;
                 }
                 return false;
@@ -175,6 +184,7 @@ public class FoodManager : MonoBehaviour {
                 if (carrotCount > 0 && chickpeaCount > 0) {
                     carrotCount--;
                     chickpeaCount--;
+                    updateUiFoodCounts();
                     return true;
                 }
                 return false;
@@ -182,6 +192,7 @@ public class FoodManager : MonoBehaviour {
                 if (pepperCount > 0 && potatoesCount > 0) {
                     pepperCount--;
                     potatoesCount--;
+                    updateUiFoodCounts();
                     return true;
                 }
                 return false;
@@ -190,6 +201,7 @@ public class FoodManager : MonoBehaviour {
                     pepperCount--;
                     chickpeaCount--;
                     garlicCount--;
+                    updateUiFoodCounts();
                     return true;
                 }
                 return false;
@@ -200,6 +212,7 @@ public class FoodManager : MonoBehaviour {
                     chickpeaCount--;
                     garlicCount--;
                     pepperCount--;
+                    updateUiFoodCounts();
                     return true;
                 }
                 return false;
@@ -236,5 +249,13 @@ public class FoodManager : MonoBehaviour {
         yield return new WaitForSeconds(cookTime);
         Instantiate(prefabManager.getObjectByItemType(itemType), groundTileManager.ovenPosition + Vector3.down, Quaternion.identity);
         isCooking = false;
+    }
+
+    public void updateUiFoodCounts() {
+        carrotText.text = "Carrots: " + carrotCount;
+        garlicText.text = "Garlic: " + garlicCount;
+        chickpeaText.text = "Chickpea: " + chickpeaCount;
+        pepperText.text = "Peppers: " + pepperCount;
+        potatoText.text = "Potatoes: " + potatoesCount;
     }
 }
