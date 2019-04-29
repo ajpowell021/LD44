@@ -11,9 +11,6 @@ public class SfxPlayer : MonoBehaviour {
         audioSource = gameObject.GetComponent<AudioSource>();
     }
 
-    private void Start() {
-    }
-
     public void playSound() {
         audioSource.Play();
     }
@@ -29,6 +26,16 @@ public class SfxPlayer : MonoBehaviour {
 
     public void playPurchaseSound() {
         audioSource.clip = clips[1];
+        playSound();
+    }
+
+    public void playWaterSound() {
+        audioSource.clip = clips[2];
+        playSound();
+    }
+
+    public void playPickupPlantSound() {
+        audioSource.clip = clips[3];
         playSound();
     }
 

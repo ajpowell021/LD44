@@ -42,6 +42,7 @@ public class UseItem : MonoBehaviour {
                 case ItemType.WaterCan:
                     if (controller.currentGroundType == GroundType.Dirt) {
                         controller.plant.waterGround();
+                        sfxPlayer.playWaterSound();
                     }
                     break;
                 case ItemType.Hoe:
@@ -88,6 +89,7 @@ public class UseItem : MonoBehaviour {
                     if (controller.plant.canBePicked) {
                         playerInventory.setNewInventoryItem(plantManager.getItemTypeFromPlantType(controller.plant.plantType));
                         controller.plant.pickPlant();
+                        sfxPlayer.playPickupPlantSound();
                     }
                     break;
                 default:
