@@ -5,20 +5,15 @@ using UnityEngine;
 public class DropItem : MonoBehaviour {
 
     private PrefabManager prefabManager;
+    private FarmerMovement farmerMovement;
 
     private void Start() {
         prefabManager = ClassManager.instance.prefabManager;
+        farmerMovement = ClassManager.instance.farmerMovement;
     }
 
     public void itemDropped(ItemType item) {
-        int roll = Random.Range(0, 2);
-        Vector3 positionToDrop;
-        if (roll == 0) {
-            positionToDrop = transform.position + new Vector3(-3, 0, 0);
-        }
-        else {
-            positionToDrop = transform.position + new Vector3(3, 0, 0);
-        }
-        Instantiate(prefabManager.getObjectByItemType(item), positionToDrop, Quaternion.identity);
+        Vector3 positionToDrop = farmerMovement.currentFacingDirection * -1.5f + farmerMovement.gameObject.transform.position;
+        Instantiate(prefabManager.getObjectByItemType(item), positionToDrop, Quaternion.identity);   
     }
 }
