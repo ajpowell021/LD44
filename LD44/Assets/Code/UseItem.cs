@@ -49,7 +49,7 @@ public class UseItem : MonoBehaviour {
                     break;
                 case ItemType.CarrotSeed:
                 case ItemType.PotatoeSeed:
-                case ItemType.CornSeed:
+                case ItemType.GarlicSeed:
                 case ItemType.Veg4Seed:
                 case ItemType.Veg5Seed:
                     if (controller.currentGroundType == GroundType.Dirt && !controller.plant.seedPresent) {
@@ -61,7 +61,7 @@ public class UseItem : MonoBehaviour {
                 case ItemType.Potatoe:
                 case ItemType.Veg4:
                 case ItemType.Veg5:
-                case ItemType.Corn:
+                case ItemType.Garlic:
                     if (selectedTileController.selectedTilePosition == groundTileManager.cratePosition) {
                         // store it
                         foodManager.addItemToStorage(item);

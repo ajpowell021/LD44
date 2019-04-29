@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class FoodManager : MonoBehaviour {
 
-    public int cornCount;
+    public int garlicCount;
     public int carrotCount;
     public int potatoesCount;
     public int veg4Count;
@@ -16,7 +16,7 @@ public class FoodManager : MonoBehaviour {
 
     public bool isCooking;
     
-    public int rawCornAge;
+    public int rawGarlicAge;
     public int rawCarrotAge;
     public int rawPotatoAge;
     public int rawVeg4Age;
@@ -47,8 +47,8 @@ public class FoodManager : MonoBehaviour {
 
     public int getAgeFromItemType(ItemType itemType) {
         switch (itemType) {
-            case ItemType.Corn:
-                return rawCornAge;
+            case ItemType.Garlic:
+                return rawGarlicAge;
             case ItemType.Carrot:
                 return rawCarrotAge;
             case ItemType.Potatoe:
@@ -77,8 +77,8 @@ public class FoodManager : MonoBehaviour {
 
     public void addItemToStorage(ItemType itemType) {
         switch (itemType) {
-            case ItemType.Corn:
-                cornCount++;
+            case ItemType.Garlic:
+                garlicCount++;
                 break;
             case ItemType.Carrot:
                 carrotCount++;
@@ -148,9 +148,9 @@ public class FoodManager : MonoBehaviour {
     private bool canCookByRecipeNumber(int recipeNumber) {
         switch (recipeNumber) {
             case 1:
-                if (carrotCount > 0 && cornCount > 0) {
+                if (carrotCount > 0 && garlicCount > 0) {
                     carrotCount--;
-                    cornCount--;
+                    garlicCount--;
                     return true;
                 }
                 return false;
@@ -184,10 +184,10 @@ public class FoodManager : MonoBehaviour {
                 }
                 return false;
             case 6:
-                if (potatoesCount > 0 && carrotCount > 0 && cornCount > 0 && veg4Count > 0 && veg5Count > 0) {
+                if (potatoesCount > 0 && carrotCount > 0 && garlicCount > 0 && veg4Count > 0 && veg5Count > 0) {
                     potatoesCount--;
                     carrotCount--;
-                    cornCount--;
+                    garlicCount--;
                     veg4Count--;
                     veg5Count--;
                     return true;

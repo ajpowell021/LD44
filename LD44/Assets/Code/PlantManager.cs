@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlantManager : MonoBehaviour {
 
-    public Sprite cornOne;
-    public Sprite cornTwo;
-    public Sprite cornThree;
+    public Sprite garlicOne;
+    public Sprite garlicTwo;
+    public Sprite garlicThree;
 
     public Sprite carrotOne;
     public Sprite carrotTwo;
@@ -24,7 +24,7 @@ public class PlantManager : MonoBehaviour {
     public Sprite veg5Two;
     public Sprite veg5Three;
 
-    public float cornGrowRate;
+    public float garlicGrowRate;
     public float carrotGrowRate;
     public float potatoGrowRate;
     public float veg4GrowRate;
@@ -35,26 +35,26 @@ public class PlantManager : MonoBehaviour {
 
     public PlantType getPlantTypeFromSeed(ItemType item) {
         switch (item) {
-            case ItemType.CornSeed:
-                return PlantType.Corn;
+            case ItemType.GarlicSeed:
+                return PlantType.Garlic;
             case ItemType.CarrotSeed:
                 return PlantType.Carrot;
             default:
                 Debug.Log("Invalid item type.  Probably not a plant");
-                return PlantType.Corn;
+                return PlantType.Garlic;
         }
     }
 
     public Sprite getSpriteByTypeAndLevel(int level, PlantType type) {
         switch (type) {
-            case PlantType.Corn:
+            case PlantType.Garlic:
                 switch (level) {
                     case 1:
-                        return cornOne;
+                        return garlicOne;
                     case 2:
-                        return cornTwo;
+                        return garlicTwo;
                     default:
-                        return cornThree;
+                        return garlicThree;
                 }
             case PlantType.Carrot:
                 switch (level) {
@@ -94,14 +94,14 @@ public class PlantManager : MonoBehaviour {
                 }
             default:
                 Debug.Log("No sprite present!");
-                return cornThree;
+                return garlicThree;
         }
     }
 
     public float getGrowRateFromPlantType(PlantType plantType) {
         switch (plantType) {
-            case PlantType.Corn:
-                return cornGrowRate;
+            case PlantType.Garlic:
+                return garlicGrowRate;
             case PlantType.Carrot:
                 return carrotGrowRate;
             case PlantType.Potato:
@@ -118,8 +118,8 @@ public class PlantManager : MonoBehaviour {
 
     public ItemType getItemTypeFromPlantType(PlantType plantType) {
         switch (plantType) {
-            case PlantType.Corn:
-                return ItemType.Corn;
+            case PlantType.Garlic:
+                return ItemType.Garlic;
             case PlantType.Carrot:
                 return ItemType.Carrot;
             case PlantType.Potato:
@@ -130,7 +130,7 @@ public class PlantManager : MonoBehaviour {
                 return ItemType.Veg5;
             default:
                 Debug.Log("Error: No matching item type for plant type");
-                return ItemType.Corn;
+                return ItemType.Garlic;
         }
     }
 }

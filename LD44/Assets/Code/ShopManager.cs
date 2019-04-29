@@ -100,8 +100,8 @@ public class ShopManager : MonoBehaviour {
 
     private string getDesciptionByItemType(ItemType item) {
         switch (item) {
-            case ItemType.CornSeed:
-                return "Seeds to plant corn. Costs " + seedPrice + " years to buy";
+            case ItemType.GarlicSeed:
+                return "Seeds to plant garlic. Costs " + seedPrice + " years to buy";
             case ItemType.CarrotSeed:
                 return "Seeds to plant carrot. Costs " + seedPrice + " years to buy";
             case ItemType.PotatoeSeed:
@@ -161,7 +161,7 @@ public class ShopManager : MonoBehaviour {
 
     private void purchaseItem(ItemType itemType) {
         switch (itemType) {
-            case ItemType.CornSeed:
+            case ItemType.GarlicSeed:
             case ItemType.CarrotSeed:
             case ItemType.PotatoeSeed:
             case ItemType.Veg4Seed:

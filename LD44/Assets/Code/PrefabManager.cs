@@ -8,8 +8,8 @@ public class PrefabManager : MonoBehaviour {
     public GameObject grassObject;
     public GameObject hoeObject;
     
-    public GameObject cornSeedObject;
-    public GameObject cornObject;
+    public GameObject garlicSeedObject;
+    public GameObject garlicObject;
 
     public GameObject carrotSeedObject;
     public GameObject carrotObject;
@@ -44,10 +44,10 @@ public class PrefabManager : MonoBehaviour {
                 return waterCanObject;
             case ItemType.Hoe:
                 return hoeObject;
-            case ItemType.CornSeed:
-                return cornSeedObject;
-            case ItemType.Corn:
-                return cornObject;
+            case ItemType.GarlicSeed:
+                return garlicSeedObject;
+            case ItemType.Garlic:
+                return garlicObject;
             case ItemType.CarrotSeed:
                 return carrotSeedObject;
             case ItemType.Carrot:

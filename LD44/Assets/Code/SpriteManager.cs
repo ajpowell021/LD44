@@ -6,8 +6,8 @@ public class SpriteManager : MonoBehaviour {
 
     public Sprite noneSprite;
     public Sprite waterCanSprite;
-    public Sprite cornSeedSprite;
-    public Sprite cornSprite;
+    public Sprite garlicSeedSprite;
+    public Sprite garlicSprite;
     public Sprite carrotSeedSprite;
     public Sprite carrotSprite;
     public Sprite potatoSeedSprite;
@@ -32,10 +32,10 @@ public class SpriteManager : MonoBehaviour {
                 return waterCanSprite;
             case ItemType.Hoe:
                 return hoeSprite;
-            case ItemType.CornSeed:
-                return cornSeedSprite;
-            case ItemType.Corn:
-                return cornSprite;
+            case ItemType.GarlicSeed:
+                return garlicSeedSprite;
+            case ItemType.Garlic:
+                return garlicSprite;
             case ItemType.CarrotSeed:
                 return carrotSeedSprite;
             case ItemType.Carrot:

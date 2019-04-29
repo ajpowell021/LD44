@@ -13,10 +13,10 @@ public enum InputMode {
 public enum ItemType {
     None,
     WaterCan,
-    CornSeed,
+    GarlicSeed,
     Hoe,
     CarrotSeed,
-    Corn,
+    Garlic,
     Carrot,
     RecipeOne,
     RecipeTwo,
@@ -38,7 +38,7 @@ public enum GroundType {
 }
 
 public enum PlantType {
-    Corn,
+    Garlic,
     Carrot,
     Potato,
     Veg4,
