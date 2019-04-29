@@ -78,7 +78,6 @@ public class UseItem : MonoBehaviour {
                 case ItemType.RecipeThree:
                 case ItemType.RecipeFour:
                 case ItemType.RecipeFive:
-                case ItemType.RecipeSix:
                     playerInventory.deleteInventoryItem();
                     ageManager.eatFood(foodManager.getAgeFromItemType(item));
                     break;

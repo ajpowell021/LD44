@@ -22,7 +22,6 @@ public class SpriteManager : MonoBehaviour {
     public Sprite recipeThreeSprite;
     public Sprite recipeFourSprite;
     public Sprite recipeFiveSprite;
-    public Sprite recipeSixSprite;
 
     public Sprite getSpriteByItemType(ItemType itemType) {
         switch (itemType) {
@@ -62,8 +61,6 @@ public class SpriteManager : MonoBehaviour {
                 return recipeFourSprite;
             case ItemType.RecipeFive:
                 return recipeFiveSprite;
-            case ItemType.RecipeSix:
-                return recipeSixSprite;
             default:
                 Debug.Log("Unrecognized sprite in getSprite;");
                 return waterCanSprite;

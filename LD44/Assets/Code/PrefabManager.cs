@@ -28,7 +28,6 @@ public class PrefabManager : MonoBehaviour {
     public GameObject recipeThreeObject;
     public GameObject recipeFourObject;
     public GameObject recipeFiveObject;
-    public GameObject recipeSixObject;
 
 //    private void Awake() {
 //        for (int i = -10; i < 11; i++) {
@@ -74,8 +73,6 @@ public class PrefabManager : MonoBehaviour {
                 return recipeFourObject;
             case ItemType.RecipeFive:
                 return recipeFiveObject;
-            case ItemType.RecipeSix:
-                return recipeSixObject;
             default:
                 Debug.Log("Asked for game object for non existing item type.");
                 return null;

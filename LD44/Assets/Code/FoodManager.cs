@@ -26,7 +26,6 @@ public class FoodManager : MonoBehaviour {
     public int recipeThreeAge;
     public int recipeFourAge;
     public int recipeFiveAge;
-    public int recipeSixAge;
     
     public GameObject recipePanel;
 
@@ -67,8 +66,6 @@ public class FoodManager : MonoBehaviour {
                 return recipeFourAge;
             case ItemType.RecipeFive:
                 return recipeFiveAge;
-            case ItemType.RecipeSix:
-                return recipeSixAge;
             default:
                 Debug.Log("Error: no age data for that item type");
                 return 0;
@@ -211,8 +208,6 @@ public class FoodManager : MonoBehaviour {
                 return ItemType.RecipeFour;
             case 5:
                 return ItemType.RecipeFive;
-            case 6:
-                return ItemType.RecipeSix;
             default:
                 Debug.Log("Error: Un handled recipe number!");
                 return ItemType.RecipeOne;
